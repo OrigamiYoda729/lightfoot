@@ -11,9 +11,35 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]--> 
 		<style>
+			a {
+				color: #fff;
+				position: fixed;
+				border: none;
+				text-align: center !important;
+				bottom: 0;
+				font-weight: 500;
+				margin-left: 10px;
+			}
 			
+			a:hover {
+				color: #ccc;
+			}
+			
+			input[type=text] {
+				width: 100%;
+				padding: 12px 20px;
+				margin: 8px 0;
+				box-sizing: border-box;
+				border: 3px solid #ccc;
+				-webkit-transition: 0.5s;
+				transition: 0.5s;
+				outline: none;
+				border-radius: 3px;
+			}
 
-		
+			input[type=text]:focus {
+				border: 3px solid #555;
+			}
 		</style>
 	</head>
 	<body>
@@ -25,15 +51,37 @@
 					<h3><strong>Teacher: Mr. McCrimmon</strong></h3>
 					<hr />
 					<div class="g-signin2" data-onsuccess="onSignIn"></div>
-					<p style="margin-bottom: 7.5px;"><strong>To access this, please sign in to Google.</strong>
+					<p style="margin-bottom: 10px !important;"><strong>To access this, please sign in to Google.</strong>
+				</div>
+				<div id="intro-content2" style="display: none">
+					<h1><strong>E Period - ICT Essentials</strong></h1>
+					<h3><strong>Teacher: Mr. McCrimmon</strong></h3>
+					<hr />
+					<input type="text" />
+					<p style="margin-bottom: 10px !important;"><strong>To access this, please sign in.</strong>
 				</div>
 			</div>
 		</div>
 		
 		<iframe src="default.html" id="main-content"></iframe>
+		
+		<p style="font-size: 0.66em; margin-bottom: 7.5px;"><strong><a href="rteacher.html" id="bottom-href">Or, Sign-in as a Teacher</a></strong></p>
 		  
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/google/auth.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<script>
+			var hash = window.location.hash.substr(1).toLowerCase();
+			if (hash == "teacher") {
+				document.getElementById("intro-content2").style.display = "";
+				document.getElementById("intro-content").style.display = "none";		
+				document.getElementById("bottom-href").innerHTML = "Or, Sign-in as a Student";
+				document.getElementById("bottom-href").href = "rstudent.html";
+			} else 
+			if (hash == "" || hash == "student") {
+				document.getElementById("intro-content").style.display = "";
+				document.getElementById("intro-content2").style.display = "none";	
+			}
+		</script>
 	</body>
 </html>

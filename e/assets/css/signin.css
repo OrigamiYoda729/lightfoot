@@ -12,20 +12,20 @@
 		border-radius: 2.5px;
 	}
 	
-	#intro-content {
+	#intro-content, #intro-content2 {
 		padding: 15px;
 		text-align: center;
 	}
 	
-	#intro-content h1 {
+	#intro-content h1, #intro-content2 h1 {
 		font-size: 1.5em;
 	}
 	
-	#intro-content h3 {
+	#intro-content h3, #intro-content2 h3 {
 		font-size: 1.1em;
 	}
 	
-	#intro-content hr {
+	#intro-content hr, #intro-content2 hr {
 		width: 95%;
 		height: 1px;
 		margin: 20px auto;
@@ -34,7 +34,7 @@
 		opacity: 0.4;
 	}
 	
-	#intro-content strong {
+	#intro-content strong, #intro-content2 strong {
 		font-weight: 600 !important;
 	}
 	
