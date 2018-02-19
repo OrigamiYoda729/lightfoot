@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Redirecting...</title>
+		<script>
+			var hash = window.location.hash.substr(1).toLowerCase();
+			var periods = ["a", "b", "c", "e", "f"];
+			var error;
+
+			for (i = 0; i < periods.length; i ++) {
+				if (hash == periods[i]) {
+					location.href = periods[i] + "/";
+				} else {
+					error++;
+				}
+			}
+		</script>
+	</head>
+</html>
