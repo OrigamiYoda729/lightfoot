@@ -24,4 +24,5 @@
 		
 		$('#main-content').hide();
 		$('#gConnect').show();
+		$('#bottom-p').show();
 	}
