@@ -62,3 +62,17 @@
 			cnt(input0);
 		}
 	}
+	
+	var hash = window.location.hash.substr(1).toLowerCase();
+	
+	if (hash == "teacher") {
+		document.getElementById("intro-content2").style.display = "";
+		document.getElementById("intro-content").style.display = "none";		
+		document.getElementById("bottom-href").innerHTML = "Or, Sign-in as a Student";
+		document.getElementById("bottom-href").href = "rstudent.html";
+	} else 
+	if (hash == "" || hash == "student") {
+		document.getElementById("intro-content").style.display = "";
+		document.getElementById("intro-content2").style.display = "none";	
+	}
+	

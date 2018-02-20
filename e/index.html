@@ -37,24 +37,11 @@
 		
 		<iframe src="default.html" id="main-content"></iframe>
 		
-		<p style="font-size: 0.66em; margin-bottom: 7.5px;"><strong><a href="rteacher.html" id="bottom-href">Or, Sign-in as a Teacher</a></strong></p>
+		<p style="font-size: 0.66em; margin-bottom: 7.5px;" id="bottom-p"><strong><a href="rteacher.html" id="bottom-href">Or, Sign-in as a Teacher</a></strong></p>
 		  
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/google/user_ver.js"></script>
 		<script src="assets/google/auth.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
-		<script>
-			var hash = window.location.hash.substr(1).toLowerCase();
-			if (hash == "teacher") {
-				document.getElementById("intro-content2").style.display = "";
-				document.getElementById("intro-content").style.display = "none";		
-				document.getElementById("bottom-href").innerHTML = "Or, Sign-in as a Student";
-				document.getElementById("bottom-href").href = "rstudent.html";
-			} else 
-			if (hash == "" || hash == "student") {
-				document.getElementById("intro-content").style.display = "";
-				document.getElementById("intro-content2").style.display = "none";	
-			}
-		</script>
 	</body>
 </html>
