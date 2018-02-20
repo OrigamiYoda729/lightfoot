@@ -9,7 +9,7 @@
 			
 			$('#main-content').show();
 			$('#gConnect').hide();
-			$('bottom-p').hide();
+			$('#bottom-p').hide();
 			
 			frame.loggedin(data)
 		}
