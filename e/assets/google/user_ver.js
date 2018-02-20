@@ -24,7 +24,10 @@
 	
 	function cnt(a) {
 		setCookie("user", a, 30);
-		location.href = "teacher.html";
+		document.getElementById("main-content").src = "teacher.html";
+		document.getElementById("gConnect").style.display = "none";
+		document.getElementById("bottom-p").style.display = "none";
+		$("#main-content").show()
 	}
 	
 	function ver(x, y) {
@@ -49,7 +52,6 @@
 		
 		if (ver_error == false) {
 			console.log("error");
-			alert(x + ", " + y);
 		}
 	}
 	
@@ -63,16 +65,33 @@
 		}
 	}
 	
-	var hash = window.location.hash.substr(1).toLowerCase();
-	
-	if (hash == "teacher") {
-		document.getElementById("intro-content2").style.display = "";
-		document.getElementById("intro-content").style.display = "none";		
-		document.getElementById("bottom-href").innerHTML = "Or, Sign-in as a Student";
-		document.getElementById("bottom-href").href = "rstudent.html";
-	} else 
-	if (hash == "" || hash == "student") {
-		document.getElementById("intro-content").style.display = "";
-		document.getElementById("intro-content2").style.display = "none";	
+	function cver() {
+		var nUser = getCookie("user");
+		if (nUser == "lightfootj2") { 
+			document.getElementById("main-content").src = "teacher.html";
+			document.getElementById("gConnect").style.display = "none";
+			document.getElementById("bottom-p").style.display = "none";
+			$("#main-content").show();
+			alert(nUser);
+		} else
+		if (nUser == "mccrimmonj") {
+			document.getElementById("main-content").src = "teacher.html";
+			document.getElementById("gConnect").style.display = "none";
+			document.getElementById("bottom-p").style.display = "none";
+			$("#main-content").show();
+			alert(nUser);			
+		} else {
+			var hash = window.location.hash.substr(1).toLowerCase();
+			
+			if (hash == "teacher") {
+				document.getElementById("intro-content2").style.display = "";
+				document.getElementById("intro-content").style.display = "none";		
+				document.getElementById("bottom-href").innerHTML = "Or, Sign-in as a Student";
+				document.getElementById("bottom-href").href = "rstudent.html";
+			} else 
+			if (hash == "" || hash == "student") {
+				document.getElementById("intro-content").style.display = "";
+				document.getElementById("intro-content2").style.display = "none";	
+			}			
+		}
 	}
-	

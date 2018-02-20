@@ -79,7 +79,7 @@
 		padding: 3px 10px;
 		margin: 8px 0 4px;
 		box-sizing: border-box;
-		border: 2px solid #999;
+		border: 2px solid #666;
 		-webkit-transition: 0.5s;
 		transition: 0.5s;
 		outline: none;
@@ -89,7 +89,7 @@
 	}
 
 	input[type=text]:focus, input[type=password]:focus {
-		border: 2px solid #555;
+		border: 2px solid #222;
 	}
 	
 	input[type=button] {
@@ -98,8 +98,8 @@
 		padding: 5px 0 !important;
 		margin: 8px 0 4px;
 		box-sizing: border-box;
-		border: 2px solid #777;
-		background: #777;
+		border: 2px solid #666;
+		background: #666;
 		-webkit-transition: 0.5s;
 		transition: 0.5s;
 		outline: none;
@@ -109,7 +109,7 @@
 	}
 
 	input[type=button]:focus, input[type=button]:hover, input[type=button]:active {
-		background: #555;
-		border: 2px solid #555;
+		background: #222;
+		border: 2px solid #222;
 	}
 			
