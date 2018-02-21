@@ -2,7 +2,7 @@
 	function onSignIn(googleUser) {
 		var site_hash = window.location.hash.substr(1).toLowerCase();
 		
-		if (site_hash == "student") {
+		if (site_hash == "student" || site_hash == "") {
 			var profile = googleUser.getBasicProfile();
 			var data = [profile.getId(), profile.getName(), profile.getGivenName(), profile.getFamilyName(), profile.getImageUrl(), profile.getEmail()];
 			var frame = document.getElementById("main-content").contentWindow;
