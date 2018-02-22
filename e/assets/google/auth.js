@@ -5,6 +5,8 @@
 			var data = [profile.getId(), profile.getName(), profile.getGivenName(), profile.getFamilyName(), profile.getImageUrl(), profile.getEmail()];
 			var frame = document.getElementById("main-content").contentWindow;
 			
+			console.log(profile.getId());
+			
 			$('#main-content').show();
 			$('#gConnect').hide();
 			
