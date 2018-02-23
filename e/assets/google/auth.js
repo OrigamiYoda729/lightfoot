@@ -5,7 +5,9 @@
 			var data = [profile.getId(), profile.getName(), profile.getGivenName(), profile.getFamilyName(), profile.getImageUrl(), profile.getEmail()];
 			var frame = document.getElementById("main-content").contentWindow;
 			
-			console.log(profile.getId());
+			if (profile.getId() == 113066122019825151969 || profile.getId() == "113066122019825151969") {
+				alert("hello");
+			}
 			
 			$('#main-content').show();
 			$('#gConnect').hide();

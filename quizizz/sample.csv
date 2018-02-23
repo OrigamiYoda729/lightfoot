@@ -1,2 +1,0 @@
-Question,Option 1,Option 2,Option 3,Option 4,Correct Answer,Time,Image Link
-Text of the question (required),Text for option 1 (required),Text for option 2 (required),Text for option 3 (optional),Text for option 4 (optional),Integer (1-4 for the correct option),"Time in seconds (optional, default value is 30)",Link of the image (optional)
