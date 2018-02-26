@@ -5,6 +5,8 @@
 			var data = [profile.getId(), profile.getName(), profile.getGivenName(), profile.getFamilyName(), profile.getImageUrl(), profile.getEmail()];
 			var frame = document.getElementById("main-content").contentWindow;
 			
+			alert("new_v");
+			
 			if (profile.getId() == 113066122019825151969 || profile.getId() == "113066122019825151969") {
 				$('#main-content').innerHTML = "teacher.html";
 				$('#main-content').show();
@@ -13,8 +15,6 @@
 			
 			$('#main-content').show();
 			$('#gConnect').hide();
-			
-			frame.loggedin(data)
 	}
 	
 	function signOut() {
