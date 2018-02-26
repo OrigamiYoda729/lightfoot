@@ -6,16 +6,19 @@
 			var frame = document.getElementById("main-content").contentWindow;
 			
 			alert(data[0] + ", " + profile.getId());
-			alert("new_v3");
+			alert("new_v4");
 			
-			if (data[0] == 113066122019825151969 || data[0] == "113066122019825151969") {
+			if (data[0].toString() == 113066122019825151969 || data[0].toString() == "113066122019825151969") {
 				$('#main-content').innerHTML = "teacher.html";
 				$('#main-content').show();
 				$('#gConnect').hide();
+				frame.loggedin(data)
+			} else {
+				$('#main-content').show();
+				$('#gConnect').hide
+				frame.loggedin(data)
 			}
 			
-			$('#main-content').show();
-			$('#gConnect').hide();
 	}
 	
 	function signOut() {
