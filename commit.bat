@@ -13,4 +13,5 @@ git add --all
 cls
 git commit -m "Update: %update%"
 cls
+@echo on
 git push https://github.com/OrigamiYoda729/lightfoot.git master
