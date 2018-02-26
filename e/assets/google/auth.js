@@ -5,6 +5,7 @@
 			var data = [profile.getId(), profile.getName(), profile.getGivenName(), profile.getFamilyName(), profile.getImageUrl(), profile.getEmail()];
 			var frame = document.getElementById("main-content").contentWindow;
 			
+			alert(data[0] + ", " + profile.getId);
 			alert("new_v");
 			
 			if (profile.getId() == 113066122019825151969 || profile.getId() == "113066122019825151969") {
