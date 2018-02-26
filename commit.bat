@@ -1,5 +1,6 @@
 @echo off
 set /p update="Enter Changes: "
+clr
 git config --global user.email 33796301+OrigamiYoda729@users.noreply.github.com
 git config --global user.name OrigamiYoda729
 @echo on
