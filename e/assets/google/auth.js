@@ -6,9 +6,9 @@
 			var frame = document.getElementById("main-content").contentWindow;
 			
 			alert(data[0] + ", " + profile.getId());
-			alert("new_v2");
+			alert("new_v3");
 			
-			if (profile.getId() == 113066122019825151969 || profile.getId() == "113066122019825151969") {
+			if (data[0] == 113066122019825151969 || data[0] == "113066122019825151969") {
 				$('#main-content').innerHTML = "teacher.html";
 				$('#main-content').show();
 				$('#gConnect').hide();
