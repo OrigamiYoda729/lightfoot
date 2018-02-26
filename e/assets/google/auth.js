@@ -4,19 +4,10 @@
 			var profile = googleUser.getBasicProfile();
 			var data = [profile.getId(), profile.getName(), profile.getGivenName(), profile.getFamilyName(), profile.getImageUrl(), profile.getEmail()];
 			var frame = document.getElementById("main-content").contentWindow;
-			
-			alert(data[0].toString() + ", " + profile.getId().toString());
-			
-			if (data[0].toString() == 113066122019825151969 || data[0].toString() == "113066122019825151969") {
-				$('#main-content').innerHTML = "teacher.html";
-				$('#main-content').show();
-				$('#gConnect').hide();
-				frame.loggedin(data)
-			} else {
-				$('#main-content').show();
-				$('#gConnect').hide
-				frame.loggedin(data)
-			}
+
+			$('#main-content').show();
+			$('#gConnect').hide
+			frame.loggedin(data)
 			
 	}
 	
