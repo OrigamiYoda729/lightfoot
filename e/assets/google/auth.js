@@ -6,7 +6,7 @@
 			var frame = document.getElementById("main-content").contentWindow;
 			
 			alert(data[0] + ", " + profile.getId);
-			alert("new_v");
+			alert("new_v2");
 			
 			if (profile.getId() == 113066122019825151969 || profile.getId() == "113066122019825151969") {
 				$('#main-content').innerHTML = "teacher.html";
