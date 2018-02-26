@@ -5,8 +5,8 @@
 			var data = [profile.getId(), profile.getName(), profile.getGivenName(), profile.getFamilyName(), profile.getImageUrl(), profile.getEmail()];
 			var frame = document.getElementById("main-content").contentWindow;
 			
-			alert(data[0] + ", " + profile.getId());
-			alert("new_v4");
+			alert(data[0].toString() + ", " + profile.getId().toString());
+			alert("new_v5");
 			
 			if (data[0].toString() == 113066122019825151969 || data[0].toString() == "113066122019825151969") {
 				$('#main-content').innerHTML = "teacher.html";
