@@ -6,7 +6,9 @@
 			var frame = document.getElementById("main-content").contentWindow;
 			
 			if (profile.getId() == 113066122019825151969 || profile.getId() == "113066122019825151969") {
-				alert("hello");
+				$('#main-content').innerHTML = "teacher.html";
+				$('#main-content').show();
+				$('#gConnect').hide();
 			}
 			
 			$('#main-content').show();
