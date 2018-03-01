@@ -1,5 +1,5 @@
 @echo off
-set /p update-"Enter Changes: "
+set /p update="Enter Changes: "
 cls
 echo "Processing 1/7 [=------]"
 git config --global user.email 33796301+OrigamiYoda729@users.noreply.github.com
@@ -23,4 +23,4 @@ echo "Processing 7/7 [=======]"
 git push https://github.com/OrigamiYoda729/lightfoot.git master
 cls
 echo "Complete! Press Enter to Exit"
-set /p enter-""
+set /p enter=""
