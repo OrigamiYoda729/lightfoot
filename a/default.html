@@ -92,8 +92,8 @@
 										<li class="result"><a href="#coursehelp" class="scrolly">Course Help</a></li>
 
 										<div id="no-show" style="display: none;">
-											<li class="result"><a href="https://www.ucertify.com/?func=load_course&course=1D0-61A&class_code=03Pzt" target="_blank">CIW Internet Business Associate Course</a></li>
-											<li class="result"><a href="https://i7lp.integral7.com/ciw" target="_blank">CIW Internet Business Associate Tests</a></li>
+											<li class="result"><a href="https://www.ucertify.com/?func=load_course&course=1D0-61A&class_code=03Pzt" target="_blank">CIW Internet Business Associate Course<span style="display: none">uCertify</span></a></li>
+											<li class="result"><a href="https://i7lp.integral7.com/ciw" target="_blank">CIW Internet Business Associate Tests<span style="display: none">uCertify</span></a></li>
 										</div>
 										
 										<li id="result-overflow" style="display: none;"><a style="cursor: pointer;" href="javascript:void(0)" onclick="googleSearch()">...</a></li>
@@ -118,8 +118,9 @@
 								
 									<div class="wrapper-dropdown-5 dd" tabindex="1" id="subject"><div class="dd-header">Select a Version</div>
 										<ul class="dropdown">
-											<li id="multimedia"><a href="javascript:void(0)" onclick="getSubject('simple', 'show')">Simple</a></li>
-											<li id="programming"><a href="javascript:void(0)" onclick="getSubject('extreme', 'show')">Extreme</a></li>
+											<li id="simple1"><a href="javascript:void(0)" onclick="getSubject('simple1', 'show')">Simple (Section 1)</a></li>
+											<li id="simple2"><a href="javascript:void(0)" onclick="getSubject('simple2', 'show')">Simple (Section 2)</a></li>
+											<li id="extreme"><a href="javascript:void(0)" onclick="getSubject('extreme', 'show')">Extreme</a></li>
 										</ul>
 									</div>
 									
@@ -133,23 +134,24 @@
 											<li style="display: none;" id="simple-2"><a href="javascript:void(0)" onclick="getQuiz('simple-2')">Lesson 2</a></li>
 											<li style="display: none;" id="simple-3"><a href="javascript:void(0)" onclick="getQuiz('simple-3')">Lesson 3</a></li>
 											<li style="display: none;" id="simple-4"><a href="javascript:void(0)" onclick="getQuiz('simple-4')">Lesson 4</a></li>
-											<li style="display: none;" id="simple-5"><a href="javascript:void(0)" onclick="getQuiz('simple-5')">Lesson 5</a></li>
+											<li style="display: none;" id="simple-5" style="border: none !Important;"><a href="javascript:void(0)"  style="border: none !Important;" onclick="getQuiz('simple-5')">Lesson 5</a></li>
+											
 											<li style="display: none;" id="simple-6"><a href="javascript:void(0)" onclick="getQuiz('simple-6')">Lesson 6</a></li>
 											<li style="display: none;" id="simple-7"><a href="javascript:void(0)" onclick="getQuiz('simple-7')">Lesson 7</a></li>
 											<li style="display: none;" id="simple-8"><a href="javascript:void(0)" onclick="getQuiz('simple-8')">Lesson 8</a></li>
 											<li style="display: none;" id="simple-9"><a href="javascript:void(0)" onclick="getQuiz('simple-9')">Lesson 9</a></li>
 											<li style="display: none;" id="simple-10"><a href="javascript:void(0)" onclick="getQuiz('simple-10')">Lesson 10</a></li>
-											<li style="display: none;" id="simple-r1"><a href="javascript:void(0)" onclick="getQuiz('simple-r1')">Review (from uCertify)</a></li>
+											<li style="display: none;" id="simple-r1"><a href="javascript:void(0)"  style="border: none !Important;" onclick="getQuiz('simple-r1')">Review (from uCertify)</a></li>
 											
-											<li style="display: none;" id="extreme-o1"><a href="javascript:void(0)" onclick="getQuiz('extreme-1')">Lesson 1</a></li>
-											<li style="display: none;" id="extreme-o2"><a href="javascript:void(0)" onclick="getQuiz('extreme-2')">Lesson 2</a></li>
-											<li style="display: none;" id="extreme-o3"><a href="javascript:void(0)" onclick="getQuiz('extreme-3')">Lesson 3</a></li>
-											<li style="display: none;" id="extreme-o4"><a href="javascript:void(0)" onclick="getQuiz('extreme-4')">Lesson 4</a></li>
-											<li style="display: none;" id="extreme-o5"><a href="javascript:void(0)" onclick="getQuiz('extreme-5')">Lesson 5</a></li>
-											<li style="display: none;" id="extreme-o6"><a href="javascript:void(0)" onclick="getQuiz('extreme-6')">Lesson 6</a></li>
-											<li style="display: none;" id="extreme-o7"><a href="javascript:void(0)" onclick="getQuiz('extreme-7')">Lesson 7</a></li>
-											<li style="display: none;" id="extreme-o8"><a href="javascript:void(0)" onclick="getQuiz('extreme-8')">Lesson 8</a></li>
-											<li style="display: none;" id="extreme-c1"><a href="javascript:void(0)" onclick="getQuiz('extreme-r1')">Custom Quiz</a></li>
+											<li style="display: none;" id="extreme-1"><a href="javascript:void(0)" onclick="getQuiz('extreme-1')">Lesson 1</a></li>
+											<li style="display: none;" id="extreme-2"><a href="javascript:void(0)" onclick="getQuiz('extreme-2')">Lesson 2</a></li>
+											<li style="display: none;" id="extreme-3"><a href="javascript:void(0)" onclick="getQuiz('extreme-3')">Lesson 3</a></li>
+											<li style="display: none;" id="extreme-4"><a href="javascript:void(0)" onclick="getQuiz('extreme-4')">Lesson 4</a></li>
+											<li style="display: none;" id="extreme-5"><a href="javascript:void(0)" onclick="getQuiz('extreme-5')">Lesson 5</a></li>
+											<li style="display: none;" id="extreme-6"><a href="javascript:void(0)" onclick="getQuiz('extreme-6')">Lesson 6</a></li>
+											<li style="display: none;" id="extreme-7"><a href="javascript:void(0)" onclick="getQuiz('extreme-7')">Lesson 7</a></li>
+											<li style="display: none;" id="extreme-8"><a href="javascript:void(0)" onclick="getQuiz('extreme-8')">Lesson 8</a></li>
+											<li style="display: none;" id="extreme-c1"><a href="javascript:void(0)"  style="border: none !Important;" onclick="getQuiz('extreme-c1')">Custom Quiz</a></li>
 											
 									</div>
 									
@@ -158,7 +160,7 @@
 									<div id="game-code" class="quizizz-div" onclick="openModal()">
 										<h5 class="q">Game Code:</h5>
 										<h2 class="q">------</h1>
-									</div>
+									</div>								
 
 								</div>
 								
@@ -206,7 +208,7 @@
 					<div class="modal-content" style="text-align: center; font-weight: 500; padding: 25px;">
 						<span class="close">&times;</span>
 						<div id="modal-display1" style="display: none">
-							<h2 id="modal-header1" style="margin-bottom: 15px; font-weight: 500;">Play {quizSubject} {quizLesson} on Quizizz?</h2>
+							<h2 id="modal-header1" style="margin-bottom: 15px; font-weight: 500;">Play CIW IBA: {quizSubject} {quizLesson} on Quizizz?</h2>
 							<hr style="border-top: solid 1.5px #666; width: 80%; margin-bottom: 15px;"/>
 							
 							<p id="message1" style="display: none;">To play this quiz, navigate to <a href="https://join.quizizz.com/">https://join.quizizz.com/</a> and use the game code <a href="javascript:void(0)" onclick="copy(this)" id="gamecode">------</a> (click to copy).</p>

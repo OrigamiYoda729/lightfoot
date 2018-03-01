@@ -8,10 +8,30 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/signin.css" />
+		<style>
+			.select-style {
+				width: 95%;
+				margin: auto;
+			}
+
+			.select-style select {
+				width: 95%;
+				padding: 10px 12px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				background: #fff;
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+			.select-style select:focus {
+				outline: none;
+			}
+		</style>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]--> 
 	</head>
-	<body>
+	<body onload="document.getElementById('period').value = 'a'">
 		
 		<div id="gConnect">
 			<div id="intro-div">
@@ -19,6 +39,14 @@
 					<h1><strong>A Period - CIW IBA</strong></h1>
 					<h3><strong>Teacher: Mr. Lightfoot</strong></h3>
 					<hr />
+					<div class="select-style">
+						<select id="period" onchange="location.href='../' + this.value + '/'">
+							<option value="a">A Period</option>
+							<option value="b">B Period</option>
+							<option value="c">C Period</option>
+							<option value="f">F Period</option>
+						</select>
+					</div>
 					<div class="g-signin2" data-onsuccess="onSignIn"></div>
 					<p style="margin-bottom: 10px !important;"><strong>To access this, please sign in to Google.</strong>
 				</div>

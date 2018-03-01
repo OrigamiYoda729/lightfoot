@@ -92,56 +92,73 @@
 	
 	function getSubject(subject, action) {
 		if (action == "hide") {
-			if (subject == "multimedia") {
-				document.getElementById("multimedia-1").style = "display: none";
-				document.getElementById("multimedia-2").style = "display: none";
-				document.getElementById("multimedia-3").style = "display: none";
-				document.getElementById("multimedia-r1").style = "display: none";
-				document.getElementById("multimedia-r2").style = "display: none";
+			if (subject == "simple1") {
+				document.getElementById("simple-1").style = "display: none";
+				document.getElementById("simple-2").style = "display: none";
+				document.getElementById("simple-3").style = "display: none";
+				document.getElementById("simple-4").style = "display: none";
+				document.getElementById("simple-5").style = "display: none";
 			} else
-			if (subject == "programming") {
-				document.getElementById("programming-1").style = "display: none";
-				document.getElementById("programming-2").style = "display: none";
-				document.getElementById("programming-3").style = "display: none";
-				document.getElementById("programming-4").style = "display: none";
-				document.getElementById("programming-5").style = "display: none";
-				document.getElementById("programming-6").style = "display: none";
-				document.getElementById("programming-r1").style = "display: none";
-				document.getElementById("programming-r2").style = "display: none";
+			if (subject == "simple2") {
+				document.getElementById("simple-6").style = "display: none";
+				document.getElementById("simple-7").style = "display: none";
+				document.getElementById("simple-8").style = "display: none";
+				document.getElementById("simple-9").style = "display: none";
+				document.getElementById("simple-10").style = "display: none";
+				document.getElementById("simple-r1").style = "display: none";
+			} else
+			if (subject == "extreme") {
+				document.getElementById("extreme-o1").style = "display: none";
+				document.getElementById("extreme-o2").style = "display: none";
+				document.getElementById("extreme-o3").style = "display: none";
+				document.getElementById("extreme-o4").style = "display: none";
+				document.getElementById("extreme-o5").style = "display: none";
+				document.getElementById("extreme-o6").style = "display: none";
+				document.getElementById("extreme-o7").style = "display: none";
+				document.getElementById("extreme-o8").style = "display: none";
+				document.getElementById("extreme-c1").style = "display: none";
 			} else {
 				console.log("Error: Invalid function syntax.");
 			}			
 		} else
 		if (action == "show") {
-			if (subject == "simple") {
+			if (subject == "simple1") {
 				document.getElementById("origin-select").style = "display: none";
-				document.getElementsByClassName("dd-header")[0].innerHTML = "Simple";
+				document.getElementsByClassName("dd-header")[0].innerHTML = "Simple (Section 1)";
 				document.getElementById("simple-1").style = "display: auto";
 				document.getElementById("simple-2").style = "display: auto";
 				document.getElementById("simple-3").style = "display: auto";
 				document.getElementById("simple-4").style = "display: auto";
 				document.getElementById("simple-5").style = "display: auto";
+				getSubject("simple2", "hide");
+				getSubject("extreme", "hide");
+			} else
+			if (subject == "simple2") {
+				document.getElementById("origin-select").style = "display: none";
+				document.getElementsByClassName("dd-header")[0].innerHTML = "Simple (Section 2)";
 				document.getElementById("simple-6").style = "display: auto";
 				document.getElementById("simple-7").style = "display: auto";
 				document.getElementById("simple-8").style = "display: auto";
 				document.getElementById("simple-9").style = "display: auto";
 				document.getElementById("simple-10").style = "display: auto";
 				document.getElementById("simple-r1").style = "display: auto";
+				getSubject("simple1", "hide");
 				getSubject("extreme", "hide");
 			} else
 			if (subject == "extreme") {
 				document.getElementById("origin-select").style = "display: none";
 				document.getElementsByClassName("dd-header")[0].innerHTML = "Extreme";
-				document.getElementById("extreme-o1").style = "display: auto";
-				document.getElementById("extreme-o2").style = "display: auto";
-				document.getElementById("extreme-o3").style = "display: auto";
-				document.getElementById("extreme-o4").style = "display: auto";
-				document.getElementById("extreme-o5").style = "display: auto";
-				document.getElementById("extreme-o6").style = "display: auto";
-				document.getElementById("extreme-o7").style = "display: auto";
-				document.getElementById("extreme-o8").style = "display: auto";
+				document.getElementById("extreme-1").style = "display: auto";
+				document.getElementById("extreme-2").style = "display: auto";
+				document.getElementById("extreme-3").style = "display: auto";
+				document.getElementById("extreme-4").style = "display: auto";
+				document.getElementById("extreme-5").style = "display: auto";
+				document.getElementById("extreme-6").style = "display: auto";
+				document.getElementById("extreme-7").style = "display: auto";
+				document.getElementById("extreme-8").style = "display: auto";
 				document.getElementById("extreme-c1").style = "display: auto";
-				getSubject("simple", "hide");
+				getSubject("simple1", "hide");
+				getSubject("simple2", "hide");
 			} else {
 				console.log("Error: Invalid function syntax.");
 			}
@@ -177,7 +194,7 @@
 			document.getElementById("controls3").style.display = "none";
 			document.getElementById("modal-header1").innerHTML = document.getElementById("modal-header1").innerHTML.replace("{quizSubject}", document.getElementsByClassName("dd-header")[0].innerHTML).replace("{quizLesson}", document.getElementsByClassName("dd-header")[1].innerHTML);
 			document.getElementById("gamecode").innerHTML = document.getElementsByClassName("q")[1].innerHTML;
-			document.getElementById("joinGameBtn").href = "https://origamiyoda729.github.io/Private3/quizizz/default.html?gc=" + gcode;
+			document.getElementById("joinGameBtn").href = "https://quizizz.com/join?gc=" + gcode;
 			document.getElementById("printQuizBtn").href = "http://bit.ly/print-quizizz#" + x;
 			document.getElementById("message1").style.display = "";
 			document.getElementById("controls1").style.display = "";
@@ -228,8 +245,8 @@
 	}
 	
 	function getQuiz(id) {
-		var gc = getCode(id);		
-		if (gc != 000000 && gc != "000000" && gc != "XXXXXX") { 
+		var gc = getCode(id);
+		if (gc != "000000" && gc != "XXXXXX") { 
 			document.getElementsByClassName("dd-header")[1].innerHTML = document.getElementById(id).getElementsByTagName("a")[0].innerHTML;
 			document.getElementsByClassName("q")[1].innerHTML = gc;
 		} else 
