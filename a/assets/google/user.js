@@ -44,7 +44,7 @@
 		for (i = 0; i < li.length; i++) {
 			a = li[i].getElementsByTagName("a")[0];
 			if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-				li[i].style = "display: ";
+				li[i].style = "display: auto";
 			} else {
 				li[i].style = "display: none";
 			}
@@ -108,14 +108,14 @@
 				document.getElementById("simple-r1").style = "display: none";
 			} else
 			if (subject == "extreme") {
-				document.getElementById("extreme-o1").style = "display: none";
-				document.getElementById("extreme-o2").style = "display: none";
-				document.getElementById("extreme-o3").style = "display: none";
-				document.getElementById("extreme-o4").style = "display: none";
-				document.getElementById("extreme-o5").style = "display: none";
-				document.getElementById("extreme-o6").style = "display: none";
-				document.getElementById("extreme-o7").style = "display: none";
-				document.getElementById("extreme-o8").style = "display: none";
+				document.getElementById("extreme-1").style = "display: none";
+				document.getElementById("extreme-2").style = "display: none";
+				document.getElementById("extreme-3").style = "display: none";
+				document.getElementById("extreme-4").style = "display: none";
+				document.getElementById("extreme-5").style = "display: none";
+				document.getElementById("extreme-6").style = "display: none";
+				document.getElementById("extreme-7").style = "display: none";
+				document.getElementById("extreme-8").style = "display: none";
 				document.getElementById("extreme-c1").style = "display: none";
 			} else {
 				console.log("Error: Invalid function syntax.");
