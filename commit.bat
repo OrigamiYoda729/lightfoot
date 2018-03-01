@@ -20,5 +20,7 @@ echo "Processing 6/7 [||||||=]"
 git commit -m "Update: %update%"
 cls
 echo "Processing 7/7 [|||||||]"
-@echo on
 git push https://github.com/OrigamiYoda729/lightfoot.git master
+cls
+echo "Complete! Press Enter to Exit"
+set /p enter=""
