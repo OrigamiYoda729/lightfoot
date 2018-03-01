@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>B Period - CIW IBA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="google-signin-client_id" content="588829739311-pu6een0ra6o6u109944ha9epuetealom.apps.googleusercontent.com" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/signin.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]--> 
+	</head>
+	<body onload="document.getElementById('period').value = 'b'">
+		
+		<div id="gConnect">
+			<div id="intro-div">
+				<div id="intro-content">
+					<h1><strong>B Period - CIW IBA</strong></h1>
+					<h3><strong>Teacher: Mr. Lightfoot</strong></h3>
+					<hr />
+					<div class="select-style">
+						<select id="period" onchange="location.href='../' + this.value + '/'">
+							<option value="a">A Period</option>
+							<option value="b">B Period</option>
+							<option value="c">C Period</option>
+							<option value="f">F Period</option>
+						</select>
+					</div>
+					<div class="g-signin2" data-onsuccess="onSignIn"></div>
+					<p style="margin-bottom: 10px !important;"><strong>To access this, please sign in with Google.</strong>
+				</div>
+			</div>
+		</div>
+		
+		<iframe src="default.html" id="main-content"></iframe>
+		
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/google/auth.js"></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+	</body>
+</html>
