@@ -6,7 +6,7 @@
 			var frame = document.getElementById("main-content").contentWindow;
 
 			$('#main-content').show();
-			$('#gConnect').hide
+			$('#gConnect').hide();
 			frame.loggedin(data)
 			
 	}

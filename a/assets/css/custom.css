@@ -2,6 +2,10 @@
 	* {
 		box-sizing: border-box;
 	}
+	
+	body {
+		overflow-x: hidden;
+	}
 
 	#searchBox {
 		background-image: url('https://www.w3schools.com/css/searchicon.png');
