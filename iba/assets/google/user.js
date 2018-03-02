@@ -192,7 +192,7 @@
 			document.getElementById("controls2").style.display = "none";
 			document.getElementById("message3").style.display = "none";
 			document.getElementById("controls3").style.display = "none";
-			document.getElementById("quizModalTitle").innerHTML = document.getElementsByClassName("dd-header")[0].innerHTML + " " + document.getElementsByClassName("dd-header")[1].innerHTML;
+			document.getElementById("quizModalTitle").innerHTML = document.getElementsByClassName("dd-header")[0].innerHTML.replace(" (Section 1)", "").replace(" (Section 2)", "") + " " + document.getElementsByClassName("dd-header")[1].innerHTML;
 			document.getElementById("gamecode").innerHTML = document.getElementsByClassName("q")[1].innerHTML;
 			document.getElementById("joinGameBtn").href = "https://quizizz.com/join?gc=" + gcode;
 			document.getElementById("printQuizBtn").href = "http://bit.ly/print-quizizz#" + x;
@@ -201,7 +201,7 @@
 		} else 
 		if (gcode == "XXXXXX" || gcode == "undefined" || gcode == undefined && x2 != "a") {
 			selectOk();
-			document.getElementById("quizModalTitle").innerHTML = document.getElementsByClassName("dd-header")[0].innerHTML + " " + document.getElementsByClassName("dd-header")[1].innerHTML;
+			document.getElementById("quizModalTitle").innerHTML = document.getElementsByClassName("dd-header")[0].innerHTML.replace(" (Section 1)", "").replace(" (Section 2)", "") + " " + document.getElementsByClassName("dd-header")[1].innerHTML;
 			document.getElementById("message1").style.display = "none";
 			document.getElementById("controls1").style.display = "none";
 			document.getElementById("message2").style.display = "none";
@@ -211,7 +211,7 @@
 		} else 
 		if (gcode == "000000" || gcode == 0 && x2 != "a") {
 			selectOk();
-			document.getElementById("quizModalTitle").innerHTML = document.getElementsByClassName("dd-header")[0].innerHTML + " " + document.getElementsByClassName("dd-header")[1].innerHTML;
+			document.getElementById("quizModalTitle").innerHTML = document.getElementsByClassName("dd-header")[0].innerHTML.replace(" (Section 1)", "").replace(" (Section 2)", "") + " " + document.getElementsByClassName("dd-header")[1].innerHTML;
 			document.getElementById("message1").style.display = "none";
 			document.getElementById("controls1").style.display = "none";
 			document.getElementById("message3").style.display = "none";
