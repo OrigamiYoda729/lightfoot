@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+		<title>One Moment Please...</title>
+		<script src="../../Private3/quizizz/assets/codes.js"></script>
+		<script src="print.js"></script>
+		<script>
+			var hash = window.location.hash.substr(1);
+			var verify = getCode(hash);
+			if (verify == "invalid" || verify == "XXXXXX" || hash == "") {
+				location.href = "https://origamiyoda729.github.io/lightfoot/";
+			} else {
+				location.href = print(hash);
+			}
+		</script>
+	</head>
+</html>
