@@ -1,0 +1,293 @@
+
+	* {
+		box-sizing: border-box;
+	}
+	
+	body {
+		overflow-x: hidden;
+	}
+
+	#searchBox {
+		background-image: url('https://www.w3schools.com/css/searchicon.png');
+		background-position: 10px 12px;
+		background-repeat: no-repeat;
+		width: 100%;
+		font-size: 16px;
+		padding: 12px 20px 12px 40px;
+		border: 1px solid #ddd;
+		margin-bottom: 12px;
+	}
+
+	.searchResults {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.searchResults li a {
+		border: 1px solid #ddd;
+		margin-top: -1px;
+		background-color: #f6f6f6;
+		padding: 12px;
+		text-decoration: none;
+		font-size: 18px;
+		color: black;
+		display: block
+	}
+
+	.searchResults li a:hover:not(.header) {
+		background-color: #eee;
+	}
+	
+	.wrapper-dropdown-5 {
+		position: relative;
+		width: 40%;
+		margin: 0 auto;
+		padding: 12px 15px;
+		background: #efefef;
+		border-radius: 5px;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+		cursor: pointer;
+		outline: none;
+		transition: all 0.3s ease-out;
+		font-style: 'Source-Sans-Pro', sans-serif;
+		font-weight: 500;
+		float: left;
+	}
+
+	.wrapper-dropdown-5:after {
+		content: "";
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		margin-top: -3px;
+		border-width: 6px 6px 0 6px;
+		border-style: solid;
+		border-color: #E27689 transparent;
+	}
+	
+	.wrapper-dropdown-5 .dropdown {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: #fff;
+		border-radius: 0 0 5px 5px;
+		border: 1px solid rgba(0,0,0,0.2);
+		border-top: none;
+		border-bottom: none;
+		list-style: none;
+		transition: all 0.3s ease-out;
+		max-height: 0;
+		overflow: hidden;
+	}
+	
+	.wrapper-dropdown-5 .dropdown li {
+		padding: 0 10px ;
+	}
+
+	.wrapper-dropdown-5 .dropdown li a {
+		display: block;
+		text-decoration: none;
+		color: #666;
+		padding: 10px 0;
+		transition: all 0.3s ease-out;
+		border-bottom: 1px solid #E27689;
+	}
+
+	.wrapper-dropdown-5 .dropdown li:last-of-type a {
+		border: none;
+	}
+
+	.wrapper-dropdown-5 .dropdown li i {
+		margin-right: 5px;
+		color: inherit;
+		vertical-align: middle;
+	}
+
+	.wrapper-dropdown-5 .dropdown li:hover a {
+		color: #111;
+	}
+	
+	.wrapper-dropdown-5.active {
+		border-radius: 5px 5px 0 0;
+		background: #E27689;
+		box-shadow: none;
+		border-bottom: none;
+		color: white;
+	}
+
+	.wrapper-dropdown-5.active:after {
+		border-color: #fff transparent;
+	}
+
+	.wrapper-dropdown-5.active .dropdown {
+		border-bottom: 1px solid rgba(0,0,0,0.25);
+		max-height: 600px;
+	}
+	
+	.quizizz-div {
+		margin-top: 1.75em;
+		display: inline-block; 
+		text-align: center; 
+		cursor: pointer;
+	}
+	
+	div.quizizz-div {
+		width: 100%;
+		margin-right: 5%;
+		padding-top: 5px;
+		background-color: #333;
+		border-radius: 3px;
+	}
+	
+	h5.q {
+		color: #fff !important;
+		font-size: 1.1em;
+		font-weight: 500;
+	}
+	
+	h2.q {
+		color: #fff !important;
+		font-weight: 700;
+		font-size: 2.1em;
+		letter-spacing: 1px;
+	}
+	
+	div.quizizz-div2 {
+		width: 47.5%;
+		margin: 15px auto;
+		padding: 12px 15px;
+		background: #efefef;
+		border-radius: 5px;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+		cursor: pointer;
+		outline: none;
+		transition: all 0.3s ease-out;
+		font-style: 'Source-Sans-Pro', sans-serif;
+		font-weight: 500;
+		float: right;
+	}
+	
+	h5.q2 {
+		color: #666 !important;
+		font-size: 1.1em;
+		font-weight: 500;
+	}
+	
+	h2.q2 {
+		color: #666 !important;
+		font-weight: 700;
+		font-size: 2.1em;
+		letter-spacing: 1px;
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		padding-top: 100px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0,0.2);
+	}
+
+	.modal-content {
+		position: relative;
+		background-color: #fefefe;
+		margin: auto;
+		padding: 0;
+		border: 1px solid #888;
+		width: 80%;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		-webkit-animation-name: animatetop;
+		-webkit-animation-duration: 0.4s;
+		animation-name: animatetop;
+		animation-duration: 0.4s
+	}
+	
+	@-webkit-keyframes animatetop {
+		from {top:-300px; opacity:0} 
+		to {top:0; opacity:1}
+	}
+
+	@keyframes animatetop {
+		from {top:-300px; opacity:0}
+		to {top:0; opacity:1}
+	}
+
+	.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.blur {
+		-webkit-filter: blur(4px);
+		filter: blur(4px);
+	}
+	
+	button.modal-special {
+		width: 80%;
+		background: #E27689;
+		font-size: 1.1em;
+		font-weight: 600;
+		letter-spacing: 1.5px;	
+		-webkit-transition: .5s ease;
+		-moz-transition: .5s ease;
+		-o-transition: .5s ease;
+		transition: .5s ease;
+	}
+	
+	button.modal-special:hover {
+		background: #D16C7F;
+	}
+	
+	button.modal-boring {
+		width: 39%;
+		background: #EDEDED;
+		color: #666 !important;
+		margin-top: 10px;
+		font-size: 0.8em;
+		font-weight: 600;
+		letter-spacing: 1.5px;	
+		-webkit-transition: .5s ease;
+		-moz-transition: .5s ease;
+		-o-transition: .5s ease;
+		transition: .5s ease;
+	}
+	
+	button.modal-boring:hover {
+		background: #DCDCDC;
+	}
+	
+	button.modal-combo {
+		width: 49%;
+		background: #E27689;
+		margin-top: 10px;
+		font-size: 0.8em;
+		font-weight: 600;
+		letter-spacing: 1.5px;	
+		-webkit-transition: .5s ease;
+		-moz-transition: .5s ease;
+		-o-transition: .5s ease;
+		transition: .5s ease;
+	}
+	
+	button.modal-combo:hover {
+		background: #D16C7F;
+	}
