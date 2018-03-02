@@ -184,7 +184,8 @@
 	function openModal() {
 		var x1 = document.getElementsByClassName("dd-header")[0].innerHTML.toLowerCase();
 		var x2 = document.getElementsByClassName("dd-header")[1].innerHTML.split(" ")[1];
-		if (x2 == "(from") { x2 = "r" + (document.getElementsByClassName("dd-header")[1].innerHTML.split(" ")[3].split(".")[0] - 1).toString(); };
+		if (x2 == "(from") { x2 = "r1" };
+		if (x2 == "review") { x2 = "r2" };
 		var x = x1 + "-" + x2;
 		var gcode = getCode(x);
 		
