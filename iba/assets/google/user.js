@@ -187,6 +187,8 @@
 		if (x2 == "(from") { x2 = "r1" };
 		if (x2 == "review") { x2 = "r2" };
 		var x = x1 + "-" + x2;
+		x = x.replace("learn (section 1)", "iba");
+		x = x.replace("learn (section 2)", "iba");
 		var gcode = getCode(x);
 		
 		if (gcode != 0 && gcode != "000000" && gcode != "XXXXXX" && gcode != "undefined" && gcode != undefined && x2 != "a") { 
