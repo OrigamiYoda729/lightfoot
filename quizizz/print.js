@@ -155,6 +155,10 @@
 				error = "false";
 				return "https://origamiyoda729.github.io/lightfoot/";
 			} else
+			if (game == "learn-r2") {   // review v2
+				error = "false";
+				return "https://origamiyoda729.github.io/lightfoot/";
+			} else
 				
 		// extreme
 			if (game == "extreme-1") {   // part 1
@@ -189,7 +193,7 @@
 				error = "false";
 				return "https://quizizz.com/print/quiz/5a98b8412b086c001a91a206";
 			} else
-			if (game == "extreme-c1") {   // custom review
+			if (game == "extreme-c1") {   // full game
 				error = "false";
 				return "https://origamiyoda729.github.io/lightfoot/";
 			} else
