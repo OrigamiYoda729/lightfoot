@@ -113,7 +113,7 @@
 		// iba
 			if (game == "learn-1") {   // lesson 1
 				error = "invalid";
-				return "https://origamiyoda729.github.io/lightfoot/";
+				return "https://quizizz.com/print/quiz/5a99b07847e32a001af34bde";
 			} else
 			if (game == "learn-2") {   // lesson 2
 				error = "false";
