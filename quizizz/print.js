@@ -5,19 +5,19 @@
 		// mutlimedia
 			if (game == "multimedia-1") {   // lesson 1
 				error = "false";
-				return "262817";
+				return "https://quizizz.com/print/quiz/5a75d0e8ea09110025d6a4be";
 			} else
 			if (game == "multimedia-2") {   // lesson 2
-				error = "nocode";
+				error = "false";
 				return "https://origamiyoda729.github.io/lightfoot/";
 			} else
 			if (game == "multimedia-3") {   // lesson 2
-				error = "nocode";
+				error = "false";
 				return "https://origamiyoda729.github.io/lightfoot/";
 			} else
 			if (game == "multimedia-r1") {   // lesson v1
 				error = "false";
-				return "149988";
+				return "https://quizizz.com/print/quiz/59c5652b5d88ea16006ec5ea";
 			} else
 			if (game == "multimedia-r2") {   // review v2
 				error = "false";
@@ -51,7 +51,7 @@
 			} else
 			if (game == "programming-r1") {   // lesson v1
 				error = "false";
-				return "376800";
+				return "https://quizizz.com/print/quiz/59baec3e8a5371100046d56b";
 			} else
 			if (game == "programming-r2") {   // review v2
 				error = "false";
@@ -77,7 +77,7 @@
 			} else
 			if (game == "webdesign-r1") {   // lesson v1
 				error = "false";
-				return "414398";
+				return "https://quizizz.com/print/quiz/58a31a08591412611058fefd";
 			} else
 			if (game == "webdesign-r2") {   // review v2
 				error = "false";
@@ -103,7 +103,7 @@
 			} else
 			if (game == "gaming-r1") {   // review v1
 				error = "false";
-				return "614004";
+				return "https://quizizz.com/print/quiz/58a31b07e21532771050d3aa";
 			} else
 			if (game == "gaming-r2") {   // review v2
 				error = "false";
@@ -157,7 +157,7 @@
 			} else
 			if (game == "learn-r2") {   // review v2
 				error = "false";
-				return "https://origamiyoda729.github.io/lightfoot/";
+				return "https://quizizz.com/print/quiz/5a99b38371e81500196aff52";
 			} else
 				
 		// extreme
