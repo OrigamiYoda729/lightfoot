@@ -98,14 +98,15 @@
 				document.getElementById("learn-3").style = "display: none";
 				document.getElementById("learn-4").style = "display: none";
 				document.getElementById("learn-5").style = "display: none";
+				document.getElementById("learn-6").style = "display: none";
 			} else
 			if (subject == "simple2") {
-				document.getElementById("learn-6").style = "display: none";
 				document.getElementById("learn-7").style = "display: none";
 				document.getElementById("learn-8").style = "display: none";
 				document.getElementById("learn-9").style = "display: none";
 				document.getElementById("learn-10").style = "display: none";
 				document.getElementById("learn-r1").style = "display: none";
+				document.getElementById("learn-r2").style = "display: none";
 			} else
 			if (subject == "extreme") {
 				document.getElementById("extreme-1").style = "display: none";
@@ -130,18 +131,19 @@
 				document.getElementById("learn-3").style = "display: auto";
 				document.getElementById("learn-4").style = "display: auto";
 				document.getElementById("learn-5").style = "display: auto";
+				document.getElementById("learn-6").style = "display: auto";
 				getSubject("simple2", "hide");
 				getSubject("extreme", "hide");
 			} else
 			if (subject == "simple2") {
 				document.getElementById("origin-select").style = "display: none";
 				document.getElementsByClassName("dd-header")[0].innerHTML = "Learn (Section 2)";
-				document.getElementById("learn-6").style = "display: auto";
 				document.getElementById("learn-7").style = "display: auto";
 				document.getElementById("learn-8").style = "display: auto";
 				document.getElementById("learn-9").style = "display: auto";
 				document.getElementById("learn-10").style = "display: auto";
 				document.getElementById("learn-r1").style = "display: auto";
+				document.getElementById("learn-r2").style = "display: auto";
 				getSubject("simple1", "hide");
 				getSubject("extreme", "hide");
 			} else
