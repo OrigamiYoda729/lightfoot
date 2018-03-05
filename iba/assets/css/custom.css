@@ -291,3 +291,7 @@
 	button.modal-combo:hover {
 		background: #D16C7F;
 	}
+	
+	.disappear {
+		display: none;
+	}

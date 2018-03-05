@@ -55,6 +55,11 @@
 		var input = document.getElementById("searchBox");
 		href('https://www.google.com/search?q=' + input.value.replace(" ", "+"));
 	}
+	
+	function appsView() {
+		document.getElementById("no-show").classList.toggle("disappear");
+		if (document.getElementById("no-show").className.search("disappear") != -1) { document.getElementById("extra-result-inner").innerHTML = "View More..." } else {document.getElementById("extra-result-inner").innerHTML = "View Less..." };
+	}
 
 	function DropDown(el) {
 		this.dd = el;

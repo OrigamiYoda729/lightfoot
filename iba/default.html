@@ -77,27 +77,37 @@
 								<div class="container">
 
 									<header>
-										<h2>Dashboard</h2>
+										<h2 style="margin-bottom: -17.5px;">Dashboard</h2>
 									</header>
-
+									
+									<h4 style="margin-bottom: 17.5px; font-size: 1.25em; font-weight: 600; text-align: center;">Your Applications</h4>
+									
 									<input type="text" id="searchBox" onkeyup="search()" placeholder="Search for applications..." title="Type in a name.">
 									
-									<ul class="searchResults" id="searchResults">
+									<ul class="searchResults" id="searchResults" style="margin-bottom: 70px;">
+									
 										<li class="result"><a href="https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/plus.profile.emails.read&redirect_uri=https://www.ucertify.com/login.php?oauth=google&response_type=code&client_id=425277821860.apps.googleusercontent.com&origin=https://www.ucertify.com/&state=dd22d49a3e4565a0b820ee0dc854d7c3&&openid.realm=https://www.ucertify.com/login.php?oauth=google&auto=&cont=" target="_blank">uCertify</a></li>
 										<li class="result"><a href="https://fs.leon.k12.fl.us/adfs/ls/?mkt=en-US&client-request-id=e75c1bee-006b-4429-ab9b-f62d5ab6ea03&wa=wsignin1.0&wtrealm=urn%3afederation%3aMicrosoftOnline&wctx=estsredirect%3d2%26estsrequest%3drQIIAXXSy2oTUQAG4Fza0BbRIoKCCF0IomWSM_dMoGDSTK5zJvc0MwhhMpkkZzKXZObMJJ1HcFUKburOhYu6cyHiI3RVEDd9AaELERfi0vgAbv7Vv_n5vxdJMk3mnjI0w2r8SCAEjaMJRiABoTEUR9AszdEUIMcsoL37e_s_Hr_6Po89L354-5tQP90mL-MPZxgv_Fwms1qt0u5kgnQjrbt25nM8fh2PnyeekDwJWBqQ7EtjHKQtw3V8fea6lp92DHyR2DYcote5TPgczbEMywokxVECIBmOT8OohhSzjxRbxKoNKdgBoFFUGKlrIdhVsHrSWiumHim2slZNkZZtkYGRzihmCzfK6hweAwDNPJBOSjPYrWLV7DGqrVCKXTNhGTI3iXuNfIBn1L9wPRQZvxK7E9ezhwvXxxfJ80RjYTjV8bHrOIaO0_9qhoORrmHkOk3PXRgeRoZ_FEko0pbSchRxo0HfWsDWSRN1ZWsQIMUXZyVmUAJ67bQMSTlEhCv219G4IHn1WpZtB9NjWFIK69IaEBKuLov4lPSqtOQM1FbYGEYVix8EBTOS-GFvylcniC6GqAs6dCguW13OZ1YyEoVTFU6woNcDKIuuT7VDz3e7jaDf9AWi3ZyLU5_QUCFfp_VxuyJX1Zo8k0YOzLYJZNXN9lIZqcUOVZGIUWMYhkJIrrKmNtSavYokm15ryEyyY5Zn0fRjMrW513adq-TdzX4HjQ8WnjtBlnG9Fb_dugOSuZ2dvf3Yo9hB7M9W_N32Rs3ijex_u3ndeJ_Dpa_jZ7Gr7QyoHQ7K4qjpTQccWaPnWdCmotXhfAqkkoTgClXyvNbrssGMOaJy5FkqfpZK_UzFvuz-D9zN3oMN1CwBKILMHpB0js3mGF79Cw2" target="_blank">Office 365</a></li>
 										<li class="result"><a href="https://www.leonschools.net/Domain/5575" target="_blank">Teacher Website</a></li>
-										<li class="result"><a href="https://www.edmodo.com/home#/group?id=24835173" target="_blank">Edmodo</a></li>
-										<li class="result"><a href="#quizizz" class="scrolly">Quizizz</a></li>
-										<li class="result"><a href="https://quizlet.com/class/4996573/" target="_blank">Quizlet</a></li>
-										<li class="result"><a href="#coursehelp" class="scrolly">Course Help</a></li>
 
-										<div id="no-show" style="display: none;">
+										<div id="no-show" class="disappear">
+											<li class="result"><a href="https://www.edmodo.com/home#/group?id=24835173" target="_blank">Edmodo</a></li>
+											<li class="result"><a href="#quizizz" class="scrolly">Quizizz</a></li>
+											<li class="result"><a href="https://quizlet.com/class/4996573/" target="_blank">Quizlet</a></li>
+											<li class="result"><a href="#coursehelp" class="scrolly">Course Help</a></li>
 											<li class="result"><a href="https://www.ucertify.com/?func=load_course&course=1D0-61A&class_code=03Pzt" target="_blank">CIW Internet Business Associate Course<span style="display: none">uCertify</span></a></li>
 											<li class="result"><a href="https://i7lp.integral7.com/ciw" target="_blank">CIW Internet Business Associate Tests<span style="display: none">uCertify</span></a></li>
 										</div>
 										
-										<li id="result-overflow" style="display: none;"><a style="cursor: pointer;" href="javascript:void(0)" onclick="googleSearch()">...</a></li>
+										<li id="extra-result"><a href="javascript:void(0)" style="cursor: pointer;" onclick="appsView()" id="extra-result-inner">View More...</a></li>
+										<li id="result-overflow" style="display: none;"><a style="cursor: pointer;" href="javascript:void(0)" onclick="googleSearch()">Search Google...</a></li>
 
+									</ul>
+									
+									<h4 style="margin-bottom: 17.5px; font-size: 1.25em; font-weight: 600; text-align: center;">Class Notifications</h4>
+									
+									<ul class="searchResults" style="margin-bottom: 17.5px;">
+										<li class="result"><a href="javascript:void(0)" target="_blank">You have none at the moment.</a></li>
 									</ul>
 									
 								</div>
