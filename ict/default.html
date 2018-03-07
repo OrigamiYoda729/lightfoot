@@ -72,26 +72,29 @@
 							</section>
 							<br />
 
-						<!-- Dashboard -->
+						<!-- Dashboard -->							
 							<section id="dashboard" class="two">
 								<div class="container">
 
 									<header>
-										<h2>Dashboard</h2>
+										<h2 style="margin-bottom: -17.5px;">Dashboard</h2>
 									</header>
-
+									
+									<h4 style="margin-bottom: 17.5px; font-size: 1.25em; font-weight: 600; text-align: center;">Your Applications</h4>
+									
 									<input type="text" id="searchBox" onkeyup="search()" placeholder="Search for applications..." title="Type in a name.">
 									
-									<ul class="searchResults" id="searchResults">
+									<ul class="searchResults" id="searchResults" style="margin-bottom: 70px;">
+									
 										<li class="result"><a href="https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/plus.profile.emails.read&redirect_uri=https://www.ucertify.com/login.php?oauth=google&response_type=code&client_id=425277821860.apps.googleusercontent.com&origin=https://www.ucertify.com/&state=dd22d49a3e4565a0b820ee0dc854d7c3&&openid.realm=https://www.ucertify.com/login.php?oauth=google&auto=&cont=" target="_blank">uCertify</a></li>
 										<li class="result"><a href="https://fs.leon.k12.fl.us/adfs/ls/?mkt=en-US&client-request-id=e75c1bee-006b-4429-ab9b-f62d5ab6ea03&wa=wsignin1.0&wtrealm=urn%3afederation%3aMicrosoftOnline&wctx=estsredirect%3d2%26estsrequest%3drQIIAXXSy2oTUQAG4Fza0BbRIoKCCF0IomWSM_dMoGDSTK5zJvc0MwhhMpkkZzKXZObMJJ1HcFUKburOhYu6cyHiI3RVEDd9AaELERfi0vgAbv7Vv_n5vxdJMk3mnjI0w2r8SCAEjaMJRiABoTEUR9AszdEUIMcsoL37e_s_Hr_6Po89L354-5tQP90mL-MPZxgv_Fwms1qt0u5kgnQjrbt25nM8fh2PnyeekDwJWBqQ7EtjHKQtw3V8fea6lp92DHyR2DYcote5TPgczbEMywokxVECIBmOT8OohhSzjxRbxKoNKdgBoFFUGKlrIdhVsHrSWiumHim2slZNkZZtkYGRzihmCzfK6hweAwDNPJBOSjPYrWLV7DGqrVCKXTNhGTI3iXuNfIBn1L9wPRQZvxK7E9ezhwvXxxfJ80RjYTjV8bHrOIaO0_9qhoORrmHkOk3PXRgeRoZ_FEko0pbSchRxo0HfWsDWSRN1ZWsQIMUXZyVmUAJ67bQMSTlEhCv219G4IHn1WpZtB9NjWFIK69IaEBKuLov4lPSqtOQM1FbYGEYVix8EBTOS-GFvylcniC6GqAs6dCguW13OZ1YyEoVTFU6woNcDKIuuT7VDz3e7jaDf9AWi3ZyLU5_QUCFfp_VxuyJX1Zo8k0YOzLYJZNXN9lIZqcUOVZGIUWMYhkJIrrKmNtSavYokm15ryEyyY5Zn0fRjMrW513adq-TdzX4HjQ8WnjtBlnG9Fb_dugOSuZ2dvf3Yo9hB7M9W_N32Rs3ijex_u3ndeJ_Dpa_jZ7Gr7QyoHQ7K4qjpTQccWaPnWdCmotXhfAqkkoTgClXyvNbrssGMOaJy5FkqfpZK_UzFvuz-D9zN3oMN1CwBKILMHpB0js3mGF79Cw2" target="_blank">Office 365</a></li>
 										<li class="result"><a href="https://www.leonschools.net/Domain/5575" target="_blank">Teacher Website</a></li>
-										<li class="result"><a href="https://www.edmodo.com/home#/group?id=24835173" target="_blank">Edmodo</a></li>
-										<li class="result"><a href="#quizizz" class="scrolly">Quizizz</a></li>
-										<li class="result"><a href="https://quizlet.com/class/4996641/" target="_blank">Quizlet</a></li>
-										<li class="result"><a href="#coursehelp" class="scrolly">Course Help</a></li>
 
-										<div id="no-show" style="display: none;">
+										<div id="no-show" class="disappear">
+											<li class="result"><a href="https://www.edmodo.com/home#/group?id=24835173" target="_blank">Edmodo</a></li>
+											<li class="result"><a href="#quizizz" class="scrolly">Quizizz</a></li>
+											<li class="result"><a href="https://quizlet.com/class/4996573/" target="_blank">Quizlet</a></li>
+											<li class="result"><a href="#coursehelp" class="scrolly">Course Help</a></li>
 											<li class="result"><a href="http://www.ucertify.com/?func=load_course&course=ICT-multimedia-essentials&class_code=03pEL" target="_blank">ICT Multimedia Essentials Course</a></li>
 											<li class="result"><a href="http://www.ucertify.com/?func=load_course&course=ICT-multimedia-essentials&class_code=03pEL" target="_blank">ICT Programming & Logic Essentials Course</a></li>
 											<li class="result"><a href="http://www.ucertify.com/?func=load_course&course=ICT-web-design&class_code=03pEp" target="_blank">ICT Web Design Essentials Course</a></li>
@@ -103,8 +106,30 @@
 											<li class="result"><a href="http://www.ucertify.com/?func=load_course&course=ICT-gaming-essentials-test&class_code=03RiC" target="_blank">ICT Gaming Tests Essentials</a></li>
 										</div>
 										
-										<li id="result-overflow" style="display: none;"><a style="cursor: pointer;" href="javascript:void(0)" onclick="googleSearch()">...</a></li>
+										<li id="extra-result"><a href="javascript:void(0)" style="cursor: pointer;" onclick="appsView()" id="extra-result-inner">View More...</a></li>
+										<li id="result-overflow" style="display: none;"><a style="cursor: pointer;" href="javascript:void(0)" onclick="googleSearch()">Search Google...</a></li>
 
+									</ul>
+									
+									<h4 style="margin-bottom: 17.5px; font-size: 1.25em; font-weight: 600; text-align: center;">Class Notifications</h4>
+									
+									<ul class="searchResults" style="margin-bottom: 17.5px;">
+										<li class="result">
+											<span onclick="href('https://www.edmodo.com/post/648535842/PROCESS-Once-finish-reading-all-lessons-Chapter-1')"><a style="cursor: pointer"><img src="images/jsf34.png" style="border-radius: 3px; float: left;" width="42px" height="42px"></img><span style="float: left; font-weight: 600;"> &nbsp; &nbsp; Sloan Finger &nbsp;<span style="color: #898989; font-weight: 500;">(via Edmodo)</span></span><span style="float: right; color: #333; font-weight: 500;"><i class="fa fa-thumb-tack"></i></span><br style="margin-bottom: 13px;" />
+											<span class="notification-post" style="line-height: 5px;">
+												Once you are certified in a subject, follow the directions on the attached link and you will be completed with that subject.You are NOT FINISHED until you complete these directions and send Coach Lightfoot the certificate. (Direct link: http://bit.ly/submit-certificate)
+											</span>
+											<br /><span style="color: #898989; font-size: 0.8em;"><span style="float: left; font-weight: 600; cursor: pointer;">Click to View on Edmodo</span><span style="float: right; font-weight: 500;"><i class="fa fa-clock-o"></i> &nbsp;  Feb 9, 2018, 3:15 PM</span></span><br />
+										</span></a></li>
+										<br />
+										<li class="result">
+											<a href="https://www.edmodo.com/post/657015320/" target="_blank"><img src="images/lightfootj2_profile.jpg" style="border-radius: 3px; float: left;"></img><span style="float: left; font-weight: 600;"> &nbsp; &nbsp; Jeffery Lightfoot &nbsp;<span style="color: #898989; font-weight: 500;">(via Edmodo)</span></span><br style="margin-bottom: 13px;" />
+											<span class="notification-post" style="line-height: 5px;">
+												Apple Video:<br />
+												Watch the video, use the video to answer the questions on the worksheet.
+											</span>
+											<br /><span style="color: #898989; font-size: 0.8em;"><span style="float: left; font-weight: 600; cursor: pointer;">Click to View on Edmodo</span><span style="float: right; font-weight: 500;"><i class="fa fa-clock-o"></i> &nbsp; Jan 1, 2018, 12:00 PM</span></span><br />
+										</a></li>
 									</ul>
 									
 								</div>
