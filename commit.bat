@@ -22,5 +22,5 @@ cls
 @echo Processing 7/7 [=======]
 git push https://github.com/OrigamiYoda729/lightfoot.git master
 cls
-echo "Complete! Press Enter to Exit"
+@echo Complete! Press Enter to Exit
 set /p enter=""
