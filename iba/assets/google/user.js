@@ -327,17 +327,25 @@
 		}
 	}
 	
+	function inIframe () {
+		try {
+			return window.self !== window.top;
+		} catch (e) {
+			return true;
+		}
+	}
+	
 	window.onload = function() {
 		var newX = inIframe();
 		var newY = window.location.hash.substr(1);
 		if (newX == false && newY !== "dev") {
-			window.location.href = "http://origamiyoda729.github.io/lightfoot/iba/";
+			window.location.href = "http://origamiyoda729.github.io/lightfoot/ict/";
 		} else 
 		if (newX == false && newY === "dev") {
 			if (prompt("Enter Keycode:") === "171053015") {
 				console.log("Developer Mode Enabled");
 			} else {
-				window.location.href = "http://origamiyoda729.github.io/lightfoot/iba/";
+				window.location.href = "http://origamiyoda729.github.io/lightfoot/ict/";
 			}
 		}
 	}
