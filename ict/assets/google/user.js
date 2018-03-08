@@ -37,8 +37,10 @@
 		
 		if (input.value != "") {
 			document.getElementById("result-overflow").style.display = "";
+			document.getElementById("extra-result").style.display = "none";
 		} else {
 			document.getElementById("result-overflow").style.display = "none";
+			document.getElementById("extra-result").style.display = "";
 		}
 		
 		for (i = 0; i < li.length; i++) {
