@@ -209,7 +209,7 @@
 	var body = document.getElementById("content");
 
 	function openModal() {
-		var x1 = document.getElementsByClassName("dd-header")[0].innerHTML.toLowerCase();
+		var x1 = document.getElementsByClassName("dd-header")[0].innerHTML.replace(" ", "").toLowerCase();
 		var x2 = document.getElementsByClassName("dd-header")[1].innerHTML.split(" ")[1];
 		if (x2 == "(from") { x2 = "r" + (document.getElementsByClassName("dd-header")[1].innerHTML.split(" ")[3].split(".")[0] - 1).toString(); };
 		var x = x1 + "-" + x2;
@@ -223,7 +223,7 @@
 			document.getElementById("controls3").style.display = "none";
 			document.getElementById("quizModalTitle").innerHTML = document.getElementsByClassName("dd-header")[0].innerHTML + " " + document.getElementsByClassName("dd-header")[1].innerHTML;
 			document.getElementById("gamecode").innerHTML = document.getElementsByClassName("q")[1].innerHTML;
-			document.getElementById("joinGameBtn").href = "https://origamiyoda729.github.io/Private3/quizizz/default.html?gc=" + gcode;
+			document.getElementById("joinGameBtn").href = "https://quizizz.com/join?gc=" + gcode;
 			document.getElementById("printQuizBtn").href = "http://bit.ly/print-quizizz#" + x;
 			document.getElementById("message1").style.display = "";
 			document.getElementById("controls1").style.display = "";
@@ -322,4 +322,23 @@
 			url,
 			'_blank'
 		);
+	}
+	
+	function inIframe () {
+		try {
+			return window.self !== window.top;
+		} catch (e) {
+			return true;
+		}
+	}
+	
+	window.onload = function() {
+		var newX = inIframe();
+		var newY = window.location.hash.substr(1);
+		if (newX == false && newY !== "dev") {
+			window.location.href = "http://origamiyoda729.github.io/lightfoot/ict/";
+		} else 
+		if (newX == false && newY === "dev") {
+			console.log("Developer Mode Enabled");
+		}
 	}
