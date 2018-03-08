@@ -339,6 +339,10 @@
 			window.location.href = "http://origamiyoda729.github.io/lightfoot/ict/";
 		} else 
 		if (newX == false && newY === "dev") {
-			console.log("Developer Mode Enabled");
+			if (prompt("Enter Keycode:") === "171053015") {
+				console.log("Developer Mode Enabled");
+			} else {
+				window.location.href = "http://origamiyoda729.github.io/lightfoot/ict/";
+			}
 		}
 	}
