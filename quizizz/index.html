@@ -1,17 +1,114 @@
 <!doctype html>
 <html>
 	<head>
-		<title>One Moment Please...</title>
-		<script src="../../Private3/quizizz/assets/codes.js"></script>
-		<script src="print.js"></script>
-		<script>
-			var hash = window.location.hash.substr(1);
-			var verify = getCode(hash);
-			if (verify == "invalid" || verify == "XXXXXX" || hash == "") {
-				location.href = "https://origamiyoda729.github.io/lightfoot/";
-			} else {
-				location.href = print(hash);
-			}
-		</script>
+		<title>Quizizz</title>
+		<link rel="stylesheet" href="assets/nice-select.css" />
+		<link rel="stylesheet" href="assets/styles.css" />
+		<link rel="stylesheet" href="assets/main.css" />
 	</head>
+	<body>
+		<div id="app" class="theme-classic">
+			<div class="app-container">
+				<div data-v-404a90e7="" class="header animated fadeInDown anim-300-duration">
+					<div data-v-404a90e7="" class="left-section"></div>
+					<div data-v-404a90e7="" class="middle-section animated fadeIn anim-300-duration"><img data-v-404a90e7="" src="https://cf.quizizz.com/img/logos/logo_sm_signup.png?w=100&amp;h=26" class="logo"></div>
+				</div>
+				<div data-v-4521f52e="" class="page-container">
+					<div data-v-4521f52e="" class="screen screen-home" data-screen="home">
+						<div class="main-content">
+							<div class="join-view-wrapper">
+								<div class="top-content"></div>
+								<div class="join-widget widget-gamecode">
+									<div class="widget-title" id="widget-title">Select a Subject</div> 
+									
+									<select class="wide">
+										<option value="multimedia">ICT Multimedia Essentials</option>
+										<option value="programming">ICT Programming Essentials</option>
+										<option value="webdesign">ICT Web Design Essentials</option>
+										<option value="gaming">ICT Gaming Essentials</option>
+										<option value="learn">CIW IBA Lessons</option>
+										<option value="extreme">CIW IBA Extreme Review</option>
+									</select>
+									
+									<select class="wide multimedia invis">
+										<option value="-1">Lesson 1</option>
+										<option value="-2" disabled>Lesson 2</option>
+										<option value="-3" disabled>Lesson 3</option>
+										<option value="-r1" selected>Review (from ICT 2.0)</option>
+										<option value="-r2" disabled>Review (from ICT 3.0)</option>
+									</select>
+									
+									<select class="wide programming invis">
+										<option value="-1" disabled>Lesson 1</option>
+										<option value="-2" disabled>Lesson 2</option>
+										<option value="-3" disabled>Lesson 3</option>
+										<option value="-4" disabled>Lesson 4</option>
+										<option value="-5" disabled>Lesson 5</option>
+										<option value="-6" disabled>Lesson 6</option>
+										<option value="-r1" selected>Review (from ICT 2.0)</option>
+										<option value="-r2" disabled>Review (from ICT 3.0)</option>
+									</select>
+									
+									<select class="wide webdesign invis">
+										<option value="-1" disabled>Lesson 1</option>
+										<option value="-2" disabled>Lesson 2</option>
+										<option value="-3" disabled>Lesson 3</option>
+										<option value="-4" disabled>Lesson 4</option>
+										<option value="-r1" selected>Review (from ICT 2.0)</option>
+										<option value="-r2" disabled>Review (from ICT 3.0)</option>
+									</select>
+									
+									<select class="wide gaming invis">
+										<option value="-1" disabled>Lesson 1</option>
+										<option value="-2" disabled>Lesson 2</option>
+										<option value="-3" disabled>Lesson 3</option>
+										<option value="-4" disabled>Lesson 4</option>
+										<option value="-r1" selected>Review (from ICT 2.0)</option>
+										<option value="-r2" disabled>Review (from ICT 3.0)</option>
+									</select>
+									
+									<select class="wide learn invis">
+										<option value="-1" disabled>Lesson 1</option>
+										<option value="-2" disabled>Lesson 2</option>
+										<option value="-3" disabled>Lesson 3</option>
+										<option value="-4" disabled>Lesson 4</option>
+										<option value="-5" disabled>Lesson 5</option>
+										<option value="-6" disabled>Lesson 6</option>
+										<option value="-7" disabled>Lesson 7</option>
+										<option value="-8" disabled>Lesson 8</option>
+										<option value="-9" disabled>Lesson 9</option>
+										<option value="-10" disabled>Lesson 10</option>
+										<option value="-r1" selected>Custom Review</option>
+										<option value="-r2" disabled>Full Review (from uCertify)</option>
+									</select>
+									
+									<select class="wide extreme invis">
+										<option value="-1" selected>Part 1</option>
+										<option value="-2">Part 2</option>
+										<option value="-3">Part 3</option>
+										<option value="-4">Part 4</option>
+										<option value="-5">Part 5</option>
+										<option value="-6">Part 6</option>
+										<option value="-7">Part 7</option>
+										<option value="-8">Part 8</option>
+										<option value="-c1">Full Quiz</option>
+									</select>
+									
+									<br style="margin-bottom: 7.5px;"/>
+									<div><button class="check-room-btn btn-with-highlighter" id="proceed-btn" style="height: 52.5px; line-height: 52.5px;" onclick="proceed('next')"><div class="extra-big-text" style="font-size: 26px !important;" id="loader">Next</div></button></div>
+								</div>
+							</div>
+							<div class="bottom-section">
+								<div class="games-section-handle" onclick="location.href='https://quizizz.com/join'">Enter a Custom Game Code</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="assets/jquery.min.js"></script>
+		<script src="assets/jquery.nice-select.min.js"></script>
+		<script src="https://origamiyoda729.github.io/Private3/quizizz/assets/codes.js"></script>
+		<script src="assets/main.js"></script>
+	</body>
 </html>
