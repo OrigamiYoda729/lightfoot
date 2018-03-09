@@ -103,6 +103,7 @@
 	
 	.list {
 		background-color: #E8E8E8 !important;
+		border: solid 1px #777 !important;
 	}
 	
 	.selected {
@@ -123,4 +124,8 @@
 	
 	.invis-button:hover {
 		background-color: #FFF !important;
+	}
+	
+	.invis {
+		display: none !important;
 	}

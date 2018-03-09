@@ -19,14 +19,26 @@
 							<div class="join-view-wrapper">
 								<div class="top-content"></div>
 								<div class="join-widget widget-gamecode">
-									<div class="widget-title">Join Game</div> 
-									<select class="wide">
-										<option data-display="Select">Nothing</option>
-										<option value="1">Some option</option>
-										<option value="2">Another option</option>
-										<option value="3" disabled>A disabled option</option>
-										<option value="4">Potato</option>
+									<div class="widget-title" id="widget-title">Select a Subject</div> 
+									
+									<select class="wide" id="main-select">
+										<option value="multimedia">ICT Multimedia Essentials</option>
+										<option value="programming">ICT Programming Essentials</option>
+										<option value="webdesign">ICT Web Design Essentials</option>
+										<option value="gaming">ICT Gaming Essentials</option>
+										<option value="iba">CIW IBA Lessons</option>
+										<option value="ex">CIW IBA Extreme Review</option>
 									</select>
+									
+									<select class="wide multimedia invis" id="multimedia-select">
+										<option value="1">Lesson 1</option>
+										<option value="2">Lesson 2</option>
+										<option value="3">Lesson 3<option>
+										<option value="r1">Review (from ICT 2.0)</option>
+										<option value="r2">Review (from ICT 3.0)</option>
+									</select>
+									
+									
 									<br style="margin-bottom: 7.5px;"/>
 									<div><button class="check-room-btn btn-with-highlighter" id="proceed-btn" style="height: 52.5px; line-height: 52.5px;" onclick="proceed('next')"><div class="extra-big-text" style="font-size: 26px !important;" id="loader">Next</div></button></div>
 								</div>
