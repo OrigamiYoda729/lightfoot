@@ -30,10 +30,7 @@
 			document.getElementById("proceed-btn").onclick = "";
 			document.getElementById("loader").innerHTML = "<img src='assets/loader.svg' style='height: 50px;'>";
 			document.getElementById("proceed-btn").className += " invis-button";
-			setTimeout(function(){ 
-				document.getElementById("proceed-btn").className = "check-room-btn btn-with-highlighter";
-				document.getElementById("proceed-btn").setAttribute("onclick", "proceed('proceed')");
-				
+			setTimeout(function(){ 				
 				var select = document.getElementsByClassName("nice-select")[0];
 				var selected = select.getElementsByTagName("span")[0].innerHTML.toLowerCase().split(" ")[1].replace("web", "webdesign");
 				if (selected == "iba") {
