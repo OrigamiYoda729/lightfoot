@@ -31,7 +31,6 @@
 			document.getElementById("loader").innerHTML = "<img src='assets/loader.svg' style='height: 50px;'>";
 			document.getElementById("proceed-btn").className += " invis-button";
 			setTimeout(function(){ 
-				document.getElementById("loader").innerHTML = "Next";
 				document.getElementById("proceed-btn").className = "check-room-btn btn-with-highlighter";
 				document.getElementById("proceed-btn").setAttribute("onclick", "proceed('proceed')");
 				
@@ -49,7 +48,9 @@
 				}
 				document.getElementsByClassName("wide")[1].className += " invis";
 				var gc = getCode(gameId);
+				location.href = "index.html";
 				location.href = "https://quizizz.com/join?gc=" + gc + "&theme=classic";
+				
 			}, 750);
 		} else {
 			console.log("Error: The function proceed('" + modifier + "') is an invalid function");
@@ -57,5 +58,5 @@
 	}
 
 	$(document).ready(function() {
-	  $('select').niceSelect();
+		$('select').niceSelect();
 	});	
