@@ -1,3 +1,15 @@
+	
+	function getQueryVariable(variable) {
+	  var query = window.location.search.substring(1);
+	  var vars = query.split("&");
+	  for (var i=0;i<vars.length;i++) {
+	    var pair = vars[i].split("=");
+	    if (pair[0] == variable) {
+	      return pair[1];
+	    }
+	  } 
+	  return "invalid";
+	}
 
 	function proceed(modifier) {
 		var mod = modifier.toLowerCase();
@@ -56,8 +68,8 @@
 
 	$(document).ready(function() {
 		$('select').niceSelect();
-		var hash = window.location.hash.replace('#', '');
-		if (hash != "" || hash != "none") {
+		var hash = getQueryVariable("game");
+		if (hash != "invalid") {
 			var gc = getCode(hash);
 			if (gc != "undefined" || gc != "invalid" || gc != undefined) {
 				location.href = "index.html";
