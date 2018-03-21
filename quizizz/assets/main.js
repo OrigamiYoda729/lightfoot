@@ -24,7 +24,7 @@
 				}
 				document.getElementById("widget-title").innerHTML = "Select a Game";
 				document.getElementsByClassName("wide")[1].className += " invis";
-			}, 750);
+			}, 600);
 		} else 
 		if (mod == "proceed") {
 			document.getElementById("proceed-btn").onclick = "";
@@ -45,10 +45,10 @@
 				}
 				document.getElementsByClassName("wide")[1].className += " invis";
 				var gc = getCode(gameId);
-				location.href = "index.html";
+				location.href = "index.html#none";
 				location.href = "https://quizizz.com/join?gc=" + gc + "&theme=classic";
 				
-			}, 750);
+			}, 600);
 		} else {
 			console.log("Error: The function proceed('" + modifier + "') is an invalid function");
 		}
@@ -56,4 +56,13 @@
 
 	$(document).ready(function() {
 		$('select').niceSelect();
+		var hash = window.location.hash.replace('#', '');
+		if (hash != "" || hash != "none") {
+			var gc = getCode(hash);
+			if (gc != "undefined" || gc != "invalid" || gc != undefined) {
+				location.href = "index.html";
+				location.href = "https://quizizz.com/join?gc=" + gc + "&theme=classic";
+			}
+		}
+		
 	});	
