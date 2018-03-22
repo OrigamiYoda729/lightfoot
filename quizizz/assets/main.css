@@ -133,3 +133,8 @@
 	.wide {
 		margin-bottom: 15px;
 	}
+	
+	.list {
+		max-height: 400px !important;
+		overflow: auto !important;
+	}
