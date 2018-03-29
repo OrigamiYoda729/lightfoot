@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+		<!-- Page Meta -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Hello, world!</title>
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/litera/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+			<a class="navbar-brand" href="#">Internet Business</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor01">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Resources</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#assignments">Assignments</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#course-help">Course Help</a>
+					</li>
+				</ul>
+				<div class="form-inline my-2 my-lg-0" style="font-size: 24px; cursor: pointer;" onclick="$('#notifications').modal('toggle')">
+					<i class="far fa-bell"></i><sup><span class="badge badge-pill badge-danger" style="font-size: 10px;">1+</span></sup>
+				</div>
+			</div>
+		</nav>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="visibility: hidden;"><a class="navbar-brand" href="#">&nbsp;</a></nav>
+
+		<!-- Main -->
+		<section id="main">
+			<div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin: 50px;">
+				<label class="btn btn-primary active">
+					<input name="options" id="option1" autocomplete="off" checked="" type="radio"> Active
+				</label>
+				<label class="btn btn-primary">
+					<input name="options" id="option2" autocomplete="off" type="radio"> Radio
+				</label>
+				<label class="btn btn-primary">
+					<input name="options" id="option3" autocomplete="off" type="radio"> Radio
+				</label>
+			</div>
+		</section>
+		
+		<div class="modal fade" id="notifications">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Notifications</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<iframe src="https://launchpad.classlink.com/home#classes/73431/discuss">Your browser does not support IFrames. Please try again using a different browser.</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+	</body>
+</html>

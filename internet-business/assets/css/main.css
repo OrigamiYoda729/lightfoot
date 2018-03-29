@@ -1,0 +1,10 @@
+
+	.fake-btn {
+		cursor: pointer;
+	}
+	
+	iframe {
+		width: 100%;
+		height: 550px;
+		border: solid 2px black;
+	}
