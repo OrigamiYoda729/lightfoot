@@ -2,9 +2,10 @@
 	.fake-btn {
 		cursor: pointer;
 	}
-	
-	iframe {
+
+	.modal-iframe {
 		width: 100%;
-		height: 550px;
+		height: 567px;
 		border: solid 2px black;
+		margin-bottom: 8px;
 	}

@@ -1,0 +1,16 @@
+Question,Option 1,Option 2,Option 3,Option 4,Correct Answer
+Visual effects applied to individual items on a slide or to an entire slide in presentation software (http://presentationsoft.about.com/od/a/g/animation.htm),Animation,Real Time Collaboration,5 Elements Multimedia,Publishing a Presentation to the Web,1
+Boxes that can be used to position the content in your slides,Placeholders,Animation,Real Time Collaboration,5 Elements Multimedia,1
+"Software for presenting a topic to an audience through pictures, animations, video, sound, etc.",Presentation Software,Placeholders,Animation,Real Time Collaboration,1
+Provides a starting point for the slides in a presentation,Slide Layout,Presentation Software,Placeholders,Animation,1
+"Determines the default placeholder styles and arrangement, slide background, text styles, list options and shapes for that particular slide layout",Slide Layout Master,Slide Layout,Presentation Software,Placeholders,1
+Used to apply global settings such as font style and logo placement to the slides used in a presentation,Slide Master,Slide Layout Master,Slide Layout,Presentation Software,1
+"Affects the backgrounds, font styles, font colors and object styles for all slides within a presentation",Theme,Slide Master,Slide Layout Master,Slide Layout,1
+Animated effects that control how each slide replaces the previous one,Slides Transition,Theme,Slide Master,Slide Layout Master,1
+"A combination of text, graphic, sound, animation and video",Multimedia,Slides Transition,Theme,Slide Master,1
+Short for Picture Element,Pixel,Multimedia,Slides Transition,Theme,1
+The amount of information per pixel,Color Depth,Pixel,Multimedia,Slides Transition,1
+A free web-based presentation software available to anyone who has a Google Gmail account and Google Drive; Ability to create a new presentation and edit with others at the same time with or without an internet connection.,Google Slides,Color Depth,Pixel,Multimedia,1
+A presentation to the Web creates a copy of the presentation file as a webpage and the version will automatically update when changes are made to original presentation file,Publishing a Presentation to the Web,Google Slides,Color Depth,Pixel,1
+"Text, Audio, Animation, Video and Graphic",5 Elements Multimedia,Publishing a Presentation to the Web,Google Slides,Color Depth,1
+Working on a document with multiple users at the same time. Every change displays in real time.,Real Time Collaboration,5 Elements Multimedia,Publishing a Presentation to the Web,Google Slides,1
