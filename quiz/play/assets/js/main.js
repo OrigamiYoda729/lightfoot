@@ -1,5 +1,5 @@
 	
-	var hash = window.location.hash.replace("#", "");
+	var hash = window.location.hash.replace("#", "").replace(/%20/g, " ").replace(/%22/g, '"').replace(/%3C/g, "<").replace(/%3E/g, ">");
 	if (hash == "") {
 		alert("An error occured.");
 		location.href = "../";
