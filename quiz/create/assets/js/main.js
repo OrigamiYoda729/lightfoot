@@ -15,13 +15,69 @@
 	}
 
 	function survey_complete(ins_json_data) {
-		console.log(ins_json_data);
-		var json_data = {
-			
-			
-		}
 		$("div[data-bind='html: processedCompletedHtml, css: completedCss']").html("<h2>Creating your quiz...</h2>");
-		get_short_url("https://origamiyoda729.github.io/lightfoot/quiz/play/#" + ins_json_data, "origamiyoda729-asdf", "R_2850f6a5864e47d5804aa220f66f9819");
+		console.log(ins_json_data);
+		
+		
+		var json_data = {}
+		json_data.completedHtml = "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>";
+		json_data.title = ins_json_data.split('"')[3];
+		json_data.pages = [{
+            elements: [{
+                "type": "html",
+                "html": "You are about to start the quiz: " + ins_json_data.split('"')[3] + ".<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
+            }]
+        }];
+		
+		var ins_json_questions = ins_json_data.split("[")[1].split("]")[0].split("{");
+		var ins_json_get;
+		var ins_json_push = [];
+		for (i = 0; i < ins_json_questions.length; i++) {
+			if (i != 0) {
+				ins_json_push = [];
+				ins_json_get = ins_json_questions[i].split('"');
+				if (ins_json_get[23] == 1) {
+					ins_json_push = [{
+						type: "radiogroup",
+						title: ins_json_get[3],
+						correctAnswer: ins_json_get[7],
+						choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
+					}];
+					json_data.pages.push(ins_json_push);
+				} else
+				if (ins_json_get[23] == 2) {
+					ins_json_push = [{
+						type: "radiogroup",
+						title: ins_json_get[3],
+						correctAnswer: ins_json_get[11],
+						choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
+					}];
+					json_data.pages.push(ins_json_push);
+				} else
+				if (ins_json_get[23] == 3) {
+					ins_json_push = [{
+						type: "radiogroup",
+						title: ins_json_get[3],
+						correctAnswer: ins_json_get[15],
+						choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
+					}];
+					json_data.pages.push(ins_json_push);
+				} else
+				if (ins_json_get[23] == 4) {
+					ins_json_push = [{
+						type: "radiogroup",
+						title: ins_json_get[3],
+						correctAnswer: ins_json_get[19],
+						choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
+					}];
+					json_data.pages.push(ins_json_push);
+				}
+			}
+		}
+		
+		var final_json = "var json = " + JSON.stringify(json_data);		
+		console.log(final_json);
+		get_short_url("https://origamiyoda729.github.io/lightfoot/quiz/play/#" + final_json, "origamiyoda729-asdf", "R_2850f6a5864e47d5804aa220f66f9819");
 	}
 
 	var json = {
