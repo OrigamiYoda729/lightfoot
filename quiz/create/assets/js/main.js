@@ -22,6 +22,9 @@
 		var json_data = {}
 		json_data.completedHtml = "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>";
 		json_data.title = ins_json_data.split('"')[3];
+		json_data.startSurveyText = "Start Quiz";
+		json_data.showProgressBar = "bottom";
+		json_data.firstPageIsStarted = true;
 		json_data.pages = [{
             elements: [{
                 "type": "html",
@@ -37,47 +40,54 @@
 				ins_json_push = [];
 				ins_json_get = ins_json_questions[i].split('"');
 				if (ins_json_get[23] == 1) {
-					ins_json_push = [{
-						type: "radiogroup",
-						title: ins_json_get[3],
-						correctAnswer: ins_json_get[7],
-						choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
-					}];
+					ins_json_push = {
+						elements: [{
+							type: "radiogroup",
+							title: ins_json_get[3],
+							correctAnswer: ins_json_get[7],
+							choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
+						}]
+					};
 					json_data.pages.push(ins_json_push);
 				} else
 				if (ins_json_get[23] == 2) {
-					ins_json_push = [{
-						type: "radiogroup",
-						title: ins_json_get[3],
-						correctAnswer: ins_json_get[11],
-						choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
-					}];
+					ins_json_push = {
+						elements: [{
+							type: "radiogroup",
+							title: ins_json_get[3],
+							correctAnswer: ins_json_get[11],
+							choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
+						}]
+					};
 					json_data.pages.push(ins_json_push);
 				} else
 				if (ins_json_get[23] == 3) {
-					ins_json_push = [{
-						type: "radiogroup",
-						title: ins_json_get[3],
-						correctAnswer: ins_json_get[15],
-						choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
-					}];
+					ins_json_push = {
+						elements: [{
+							type: "radiogroup",
+							title: ins_json_get[3],
+							correctAnswer: ins_json_get[15],
+							choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
+						}]
+					};
 					json_data.pages.push(ins_json_push);
 				} else
 				if (ins_json_get[23] == 4) {
-					ins_json_push = [{
-						type: "radiogroup",
-						title: ins_json_get[3],
-						correctAnswer: ins_json_get[19],
-						choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
-					}];
+					ins_json_push = {
+						elements: [{
+							type: "radiogroup",
+							title: ins_json_get[3],
+							correctAnswer: ins_json_get[19],
+							choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
+						}]
+					};
 					json_data.pages.push(ins_json_push);
 				}
 			}
 		}
 		
-		var final_json = "var json = " + JSON.stringify(json_data);		
-		console.log(final_json);
-		get_short_url("https://origamiyoda729.github.io/lightfoot/quiz/play/#" + final_json, "origamiyoda729-asdf", "R_2850f6a5864e47d5804aa220f66f9819");
+		var final_json = "var json = " + JSON.stringify(json_data);
+		get_short_url("https://origamiyoda729.github.io/lightfoot/quiz/play/#" + final_json, "origamiyoda729", "R_2850f6a5864e47d5804aa220f66f9819");
 	}
 
 	var json = {

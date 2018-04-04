@@ -20,7 +20,8 @@
 	survey
 		.onComplete
 		.add(function(result) {
-			survey_complete(JSON.stringify(result.data));
+			$("div.sv_completed_page[data-bind='html: processedCompletedHtml, css: completedCss']").html("<h2>One moment please...</h2>");
+			location.href = "http://bit.ly/" + JSON.stringify(result.data).split('"')[3];
 		});
 
 	$("#surveyElement").Survey({
@@ -31,8 +32,4 @@
 		var new_header = "<h2 style='margin-bottom: 20px;'><strong>Enter a game code:</strong></h2>";
 		$("div#sq_100").prepend(new_header);
 		$("input[data-bind='value: completeText, click: completeLastPage, visible: koIsLastPage() && isEditMode, css: cssNavigationComplete']").val("Join Game");
-	});
-	
-	$("input[data-bind='value: completeText, click: completeLastPage, visible: koIsLastPage() && isEditMode, css: cssNavigationComplete']").click(function() {
-		location.href = "https://bit.ly/" + $("input#sq_100i").val();
 	});

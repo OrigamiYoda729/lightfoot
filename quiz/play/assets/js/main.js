@@ -1,18 +1,23 @@
-var hash = window.location.hash.replace("#", "").replace(/%20/g, " ").replace(/%22/g, '"').replace(/%3C/g, "<").replace(/%3E/g, ">");
-$("#quiz-json").html(hash);
 
-Survey
-    .StylesManager
-    .applyTheme("default");
+	var hash = window.location.hash.replace("#", "").replace(/%20/g, " ").replace(/%22/g, '"').replace(/%3C/g, "<").replace(/%3E/g, ">");
+	if (hash == "") {
+		location.href = "../";
+	} else {
+		$("#quiz-json").html(hash);
+	}
 
-window.survey = new Survey.Model(json);
+	Survey
+		.StylesManager
+		.applyTheme("default");
 
-survey
-    .onComplete
-    .add(function (result) {
-        document
-            .querySelector('#surveyResult')
-            .innerHTML = "result: " + JSON.stringify(result.data);
-    });
+	window.survey = new Survey.Model(json);
 
-$("#surveyElement").Survey({model: survey});
+	survey
+		.onComplete
+		.add(function (result) {
+			document
+				.querySelector('#surveyResult')
+				.innerHTML = "result: " + JSON.stringify(result.data);
+		});
+
+	$("#surveyElement").Survey({model: survey});
