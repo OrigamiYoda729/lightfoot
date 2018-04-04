@@ -13,3 +13,9 @@
 	h2 {
 		font-size: 24px;
 	}
+	
+	#player {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+	}
