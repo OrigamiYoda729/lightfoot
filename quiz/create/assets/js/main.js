@@ -9,7 +9,7 @@
 				"longUrl": long_url
 			},
 			function(response) {
-				$("div[data-bind='html: processedCompletedHtml, css: completedCss']").html("<h2>To access your quiz, go to <strong><a href='https:/bit.ly/lightfoot-quiz' target='_blank'>https://bit.ly/lightfoot-quiz</a></strong> and use the code <strong>" + response.data.hash + "</strong>.</h2>")
+				$("div[data-bind='html: processedCompletedHtml, css: completedCss']").html("<h2>To access your quiz, go to <strong><a href='http://bit.ly/lightfoot-quiz' target='_blank'>http://bit.ly/lightfoot-quiz</a></strong> and use the code <strong>" + response.data.hash + "</strong>.</h2>")
 			}
 		);
 	}

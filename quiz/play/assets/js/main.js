@@ -11,7 +11,7 @@
 			function(response) {
 				var long_url = response.data.expand[0].long_url.replace("#", "").replace(/%20/g, " ").replace(/%22/g, '"').replace(/%3C/g, "<").replace(/%3E/g, ">");
 				if (long_url.split("#")[0] == "https://origamiyoda729.github.io/lightfoot/quiz/play/") {
-					$("#quiz-json").html(long_url.replace("https://origamiyoda729.github.io/lightfoot/quiz/play/#", "");
+					$("#quiz-json").html(long_url.replace("https://origamiyoda729.github.io/lightfoot/quiz/play/#", ""));
 				} else {
 					alert("An error occured.");
 					location.href = "https://origamiyoda729.github.io/lightfoot/quiz/"
