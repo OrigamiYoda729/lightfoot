@@ -11,7 +11,7 @@
 			function(response) {
 				var long_url = response.data.expand[0].long_url;
 				if (long_url.split("#")[0] == "https://origamiyoda729.github.io/lightfoot/quiz/play/") {
-					location.href = "https://origamiyoda729.github.io/lightfoot/quiz/play/#" + response.data.expand[0].user_hash;
+					location.href = long_url;
 				} else {
 					alert("Please enter a valid game code.");
 					location.href = "https://origamiyoda729.github.io/lightfoot/quiz/"
