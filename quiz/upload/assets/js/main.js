@@ -110,77 +110,13 @@
 				}]
 			},
 			{
-				name: "quiz",
+				name: "file",
 				elements: [{
-					type: "matrixdynamic",
-					name: "question2",
-					title: "Quiz Creator",
-					columns: [{
-							name: "question",
-							title: "Question",
-							cellType: "text",
-							isRequired: true
-						},
-						{
-							name: "answer-choice-1",
-							title: "Answer Choice 1",
-							cellType: "text",
-							isRequired: true
-						},
-						{
-							name: "answer-choice-2",
-							title: "Answer Choice 2",
-							cellType: "text",
-							isRequired: true
-						},
-						{
-							name: "answer-choice-3",
-							title: "Answer Choice 3",
-							cellType: "text",
-							isRequired: true
-						},
-						{
-							name: "answer-choice-4",
-							title: "Answer Choice 4",
-							cellType: "text",
-							isRequired: true
-						},
-						{
-							name: "answer-select",
-							title: "Correct Answer",
-							cellType: "dropdown",
-							isRequired: true,
-							choices: [
-								"1",
-								"2",
-								"3",
-								"4"
-							]
-						},
-						{
-							name: "answer-order",
-							title: "Answer Order",
-							cellType: "dropdown",
-							isRequired: true,
-							choices: [{
-									value: "random",
-									text: "Random"
-								},
-								{
-									value: "in-order",
-									text: "In Order"
-								}
-							]
-						}
-					],
-					choices: [
-						1,
-						2,
-						3,
-						4,
-						5
-					],
-					rowCount: 1
+					type: "file",
+					name: "question1",
+					title: "Select a CSV file",
+					isRequired: true,
+					maxSize: 0
 				}]
 			}
 		]
@@ -200,5 +136,41 @@
 	
 	
 	$("input.sv_next_btn[data-bind='value: pageNextText, click: nextPage, visible: !koIsLastPage(), css: cssNavigationNext']").click(function() {
-		$("input.sv_matrix_dynamic_button[data-bind='click:question.koAddRowClick, css: question.koCss().button, value: question.addRowText']").val("Add Question");
+
+		// The event listener for the file upload
+		document.getElementById('sq_101i').addEventListener('change', upload, false);
+
+		// Method that checks that the browser supports the HTML5 File API
+		function browserSupportFileUpload() {
+			var isCompatible = false;
+			if (window.File && window.FileReader && window.FileList && window.Blob) {
+				isCompatible = true;
+			}
+			return isCompatible;
+		}
+
+		// Method that reads and processes the selected file
+		function upload(evt) {
+			if (!browserSupportFileUpload()) {
+				alert('The File APIs are not fully supported in this browser!');
+			} else {
+				var data = null;
+				var file = evt.target.files[0];
+				var reader = new FileReader();
+				reader.readAsText(file);
+				reader.onload = function(event) {
+					var csvData = event.target.result;
+					data = $.csv.toObjects(csvData);
+					if (data && data.length > 0) {
+						console.log(csvData);
+						console.log(data);
+					} else {
+						alert('No data to import!');
+					}
+				};
+				reader.onerror = function() {
+					alert('Unable to read ' + file.fileName);
+				};
+			}
+		}
 	});

@@ -18,7 +18,7 @@ var json = {
                 type: "radiogroup",
                 title: "Who said 'Give me liberty or give me death?'",
                 correctAnswer: "Patrick Henry",
-                choicesOrder: "random",
+                choicesOrder: "in-order",
                 choices: ["John Hancock", "James Madison", "Patrick Henry", "Samuel Adams"]
             }]
         }, {
