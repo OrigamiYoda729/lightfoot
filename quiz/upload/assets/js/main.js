@@ -1,4 +1,27 @@
 
+	function setCookie(cname,cvalue,exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires=" + d.toGMTString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function getCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for(var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
 	function get_short_url(long_url, login, api_key) {
 		$.getJSON(
 			"https://api-ssl.bitly.com/v3/shorten?callback=?",
@@ -16,7 +39,6 @@
 
 	function survey_complete(ins_json_data) {
 		$("div[data-bind='html: processedCompletedHtml, css: completedCss']").html("<h2>Creating your quiz...</h2>");
-		console.log(ins_json_data);
 		if (ins_json_data.search(/\[/) != -1) {
 
 			var json_data = {}
@@ -36,62 +58,64 @@
 			var ins_json_get;
 			var ins_json_push = [];
 			for (i = 0; i < ins_json_questions.length; i++) {
-				if (i != 0) {
-					ins_json_push = [];
-					ins_json_get = ins_json_questions[i].split('"');
-					if (ins_json_get[23] == 1) {
-						ins_json_push = {
-							elements: [{
-								type: "radiogroup",
-								title: ins_json_get[3],
-								correctAnswer: ins_json_get[7],
-								choicesOrder: ins_json_get[33],
-								choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
-							}]
-						};
-						json_data.pages.push(ins_json_push);
-					} else
-					if (ins_json_get[23] == 2) {
-						ins_json_push = {
-							elements: [{
-								type: "radiogroup",
-								title: ins_json_get[3],
-								correctAnswer: ins_json_get[11],
-								choicesOrder: ins_json_get[33],
-								choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
-							}]
-						};
-						json_data.pages.push(ins_json_push);
-					} else
-					if (ins_json_get[23] == 3) {
-						ins_json_push = {
-							elements: [{
-								type: "radiogroup",
-								title: ins_json_get[3],
-								correctAnswer: ins_json_get[15],
-								choicesOrder: ins_json_get[33],
-								choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
-							}]
-						};
-						json_data.pages.push(ins_json_push);
-					} else
-					if (ins_json_get[23] == 4) {
-						ins_json_push = {
-							elements: [{
-								type: "radiogroup",
-								title: ins_json_get[3],
-								correctAnswer: ins_json_get[19],
-								choicesOrder: ins_json_get[33],
-								choices: [ins_json_get[7], ins_json_get[11], ins_json_get[15], ins_json_get[19]]
-							}]
-						};
-						json_data.pages.push(ins_json_push);
-					}
+				ins_json_push = [];
+				ins_json_get = window.question_csv[i];
+				if (ins_json_get["Correct Answer"] == 1) {
+					ins_json_push = {
+						elements: [{
+							type: "radiogroup",
+							title: ins_json_get["Question"],
+							correctAnswer: ins_json_get["Answer Choice 1"],
+							choicesOrder: ins_json_get["Answer Order"],
+							choices: [ins_json_get["Answer Choice 1"], ins_json_get["Answer Choice 2"], ins_json_get["Answer Choice 3"], ins_json_get["Answer Choice 4"]]
+						}]
+					};
+					json_data.pages.push(ins_json_push);
+				} else
+				if (ins_json_get["Correct Answer"] == 2) {
+					ins_json_push = {
+						elements: [{
+							type: "radiogroup",
+							title: ins_json_get["Question"],
+							correctAnswer: ins_json_get["Answer Choice 2"],
+							choicesOrder: ins_json_get["Answer Order"],
+							choices: [ins_json_get["Answer Choice 1"], ins_json_get["Answer Choice 2"], ins_json_get["Answer Choice 3"], ins_json_get["Answer Choice 4"]]
+						}]
+					};
+					json_data.pages.push(ins_json_push);
+				} else
+				if (ins_json_get["Correct Answer"] == 3) {
+					ins_json_push = {
+						elements: [{
+							type: "radiogroup",
+							title: ins_json_get["Question"],
+							correctAnswer: ins_json_get["Answer Choice 3"],
+							choicesOrder: ins_json_get["Answer Order"],
+							choices: [ins_json_get["Answer Choice 1"], ins_json_get["Answer Choice 2"], ins_json_get["Answer Choice 3"], ins_json_get["Answer Choice 4"]]
+						}]
+					};
+					json_data.pages.push(ins_json_push);
+				} else
+				if (ins_json_get["Correct Answer"] == 4) {
+					ins_json_push = {
+						elements: [{
+							type: "radiogroup",
+							title: ins_json_get["Question"],
+							correctAnswer: ins_json_get["Answer Choice 4"],
+							choicesOrder: ins_json_get["Answer Order"],
+							choices: [ins_json_get["Answer Choice 1"], ins_json_get["Answer Choice 2"], ins_json_get["Answer Choice 3"], ins_json_get["Answer Choice 4"]]
+						}]
+					};
+					json_data.pages.push(ins_json_push);
+				} else {
+					alert("An error occurred.");
+					location.href = "../upload/";
 				}
 			}
+			console.log(json_data);
 	
 			var final_json = "var json = " + JSON.stringify(json_data);
-			get_short_url("https://origamiyoda729.github.io/lightfoot/quiz/play/#" + final_json, "origamiyoda729", "R_2850f6a5864e47d5804aa220f66f9819");
+			get_short_url("https://origamiyoda729.github.io/lightfoot/quiz/play/#" + final_json, "origamiyoda729-asdf", "R_2850f6a5864e47d5804aa220f66f9819");
 			
 		} else {
 			alert("Please add at least 1 question.");
@@ -162,8 +186,7 @@
 					var csvData = event.target.result;
 					data = $.csv.toObjects(csvData);
 					if (data && data.length > 0) {
-						console.log(csvData);
-						console.log(data);
+						question_csv = data;
 					} else {
 						alert('No data to import!');
 					}
@@ -174,3 +197,5 @@
 			}
 		}
 	});
+	
+	var queston_csv;
