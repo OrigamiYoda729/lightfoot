@@ -1,5 +1,6 @@
-<h1 style="margin: 1em 0.5em;">One Moment Please...</h1>
+<h1 style="margin: 1em 0.5em;" id="a">One Moment Please...</h1>
 <script>
-  location.href="mailto:dmscte@gmail.com";
+  location.href='mailto:dmscte@gmail.com';
   window.close();
+  document.getElementById('a').innerHTML = 'You may now close this tab.';
 </script>
